@@ -9,7 +9,7 @@
         <enum name="italic" value="5"/>
     </attr>
 
-    <declare-styleable name="TextViewX">
+    <declare-styleable name="TextViewPET">
         <attr name="fontType"/>
     </declare-styleable>
 
