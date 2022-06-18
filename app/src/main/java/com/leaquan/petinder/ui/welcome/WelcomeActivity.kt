@@ -32,7 +32,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
         setUpAnimButton()
         setUpActionButton()
         mocksData()
-        TODO("Fixed Scroll ViewPager")
+
     }
 
     private fun setUpActionButton() {
@@ -66,9 +66,9 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun setUpAnimSharedElement() {
-        window.sharedElementEnterTransition.duration = 600
+        window.sharedElementEnterTransition.duration = 650
         window.sharedElementReturnTransition.apply {
-            this.duration = 600
+            this.duration = 650
             this.interpolator = DecelerateInterpolator()
         }
     }
