@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_button_white.xml" value="0.114" />
         <entry key="app/src/main/res/drawable/background_primary_gradient_vectical.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/bg_pager_selected_dot.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/item_default_dot.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/viewpager_tab_selector.xml" value="0.114" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.184375" />
-        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_description.xml" value="0.1" />
       </map>
     </option>
   </component>

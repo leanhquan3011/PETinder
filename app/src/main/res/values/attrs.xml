@@ -13,4 +13,8 @@
         <attr name="fontType"/>
     </declare-styleable>
 
+    <declare-styleable name="ButtonPET">
+        <attr name="fontType"/>
+    </declare-styleable>
+
 </resources>

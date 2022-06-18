@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="description"
+            type="com.leaquan.petinder.ui.welcome.adapter.WelcomeDesc" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivContent"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/image_content_description"
+            loadDrawableImage="@{description.image}"/>
+
+        <com.leaquan.petinder.ui.custom_view.TextViewPET
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="-18dp"
+            android:textSize="@dimen/_28sp"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_width="@dimen/match_constraint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivContent"
+            android:text="@{description.title}"
+            style="@style/TextViewPET.Title"/>
+
+        <com.leaquan.petinder.ui.custom_view.TextViewPET
+            android:id="@+id/tvDescription"
+            android:gravity="center"
+            android:lineSpacingExtra="1sp"
+            android:textSize="@dimen/_18sp"
+            android:layout_marginHorizontal="@dimen/_22dp"
+            android:layout_width="@dimen/match_constraint"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle"
+            android:text="@{description.description}"
+            style="@style/TextViewPET.Description"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

@@ -21,20 +21,20 @@
 
             <com.leaquan.petinder.ui.custom_view.TextViewPET
                 android:id="@+id/tvTitle"
+                style="@style/TextViewPET.SubTitle"
+                android:layout_marginTop="@dimen/_50dp"
                 android:text="@string/app_title"
-                android:textSize="@dimen/_26sp"
-                android:layout_marginTop="@dimen/_32dp"
+                android:textSize="@dimen/_24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivLogo"
-                app:layout_constraintTop_toTopOf="parent"
-                style="@style/TextViewEx.SubTitle"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/ivLogo"
-                android:layout_width="@dimen/_36dp"
-                android:layout_height="@dimen/_36dp"
-                android:layout_marginEnd="@dimen/_12dp"
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
+                android:layout_marginEnd="@dimen/_8dp"
                 android:layout_marginBottom="@dimen/_16dp"
                 android:src="@drawable/ic_app_icon"
                 android:transitionName="logo_image"
@@ -45,6 +45,42 @@
                 app:layout_constraintTop_toTopOf="@id/tvTitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pagerContent"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:layout_marginTop="@dimen/_8dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            app:layout_constraintBottom_toTopOf="@+id/tabIndicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight="@dimen/_350dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_header"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabIndicator"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnAction"
+            app:layout_constraintEnd_toEndOf="@id/pagerContent"
+            app:layout_constraintStart_toStartOf="@id/pagerContent"
+            app:layout_constraintTop_toBottomOf="@+id/pagerContent"
+            app:tabBackground="@drawable/viewpager_tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="@dimen/match_constraint" />
+
+        <com.leaquan.petinder.ui.custom_view.ButtonPET
+            android:id="@+id/btnAction"
+            android:text="@string/next"
+            android:layout_marginBottom="@dimen/_50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/ButtonTitle_white"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

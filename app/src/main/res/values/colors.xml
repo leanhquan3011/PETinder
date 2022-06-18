@@ -11,4 +11,7 @@
 
     <color name="textColorBlack">#A8000000</color>
     <color name="textColorGrey">#B38C8C8C</color>
+
+    <color name="dotDefault">#B3C8C8C8</color>
+    <color name="dotSelected">#CCFFFFFF</color>
 </resources>

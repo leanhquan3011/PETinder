@@ -4,38 +4,35 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Typeface
 import android.util.AttributeSet
-import androidx.annotation.Nullable
-import androidx.annotation.StyleRes
 import com.leaquan.petinder.R
 import com.leaquan.petinder.util.type.FontType
 
-class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
+class ButtonPET : androidx.appcompat.widget.AppCompatButton {
 
-    constructor(context: Context): super(context){
+    constructor(context: Context) : super(context) {
         init(context, null)
     }
 
-    constructor(context: Context, @Nullable attrs: AttributeSet): super(context, attrs){
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         init(context, attrs)
     }
 
-    constructor(context: Context, @Nullable attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr){
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init(context, attrs)
     }
 
     private fun init(context: Context, attrs: AttributeSet?) {
-        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.TextViewPET)
-        val textStyle = typedArray.getInt(R.styleable.TextViewPET_fontType, FontType.NORMAL.type)
-        setTitleStyle(FontType.valueOf(textStyle))
+        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.ButtonPET)
+        val textStyle = typedArray.getInt(R.styleable.ButtonPET_fontType, FontType.NORMAL.type)
+        setFontType(FontType.valueOf(textStyle))
         typedArray.recycle()
     }
 
-    fun setFontType(@StyleRes fontType: Int){
-        setTypeface(typeface, fontType)
-    }
-
-    fun setTitleStyle(style: FontType){
-
+    private fun setFontType(style: FontType) {
         when(style){
             FontType.TITLE ->{
                 typeface = Typeface.create(resources.getFont(R.font.baloobhaina_regular), Typeface.BOLD)
@@ -54,4 +51,5 @@ class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
             }
         }
     }
+
 }

@@ -1,4 +1,17 @@
 <resources>
-    <string name="app_name">DatingPetApp</string>
+    <string name="app_name">PETinder</string>
     <string name="app_title">PETinder</string>
+    <string name="image_content_description">contentDescription</string>
+
+    <!--Common-->
+    <string name="next">Next</string>
+
+    <!--Welcome-->
+    <string name="lets_do_it">Let\'s Do It</string>
+    <string name="description_title1">Find Patners\nAnytime, Anywhere</string>
+    <string name="description_content1">No one is happy when lonely, and neither should yours pets</string>
+    <string name="description_title2">Make an Appointment\nEasily and Quickly</string>
+    <string name="description_content2">No one is happy when lonely, and neither should yours pets</string>
+    <string name="description_title3">Yours Pet needs\na Relationship</string>
+    <string name="description_content3">No one is happy when lonely, and neither should yours pets</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.leaquan.petinder.common.type
+package com.leaquan.petinder.util.type
 
 enum class FontType (val type : Int) {
     TITLE(1),

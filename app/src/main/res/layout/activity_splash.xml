@@ -26,14 +26,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                style="@style/TextViewEx.Title"/>
+                style="@style/TextViewPET.Title"/>
 
             <ImageView
                 android:id="@+id/ivLogo"
                 android:transitionName="logo_image"
-                android:layout_width="@dimen/_63dp"
-                android:layout_height="@dimen/_63dp"
-                android:layout_marginEnd="@dimen/_12dp"
+                android:layout_width="@dimen/_56dp"
+                android:layout_height="@dimen/_56dp"
+                android:layout_marginEnd="@dimen/_8dp"
                 android:layout_marginBottom="@dimen/_16dp"
                 android:src="@drawable/ic_app_icon"
                 app:layout_constraintTop_toTopOf="@id/tvTitle"

@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import androidx.annotation.AnimRes
 import androidx.annotation.ColorInt
-import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsControllerCompat
@@ -30,9 +30,16 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
     @LayoutRes
     abstract fun inflateLayout(): Int
 
+    @AnimRes
+    open val animationEnter : Int = R.anim.anim_blank
+
+    @AnimRes
+    open val animationLeave : Int = R.anim.anim_blank
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, inflateLayout())
+        overridePendingTransition(animationEnter, animationLeave)
         setUp()
         setUpObserver()
     }

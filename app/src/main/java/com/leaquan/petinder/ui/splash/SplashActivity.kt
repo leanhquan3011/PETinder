@@ -27,23 +27,20 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         handler.postDelayed({
             gotoWelcome()
             finish()
-            overridePendingTransition(0, 0)
-        }, 2000)
+        }, 1500)
     }
+
+    override fun setUpObserver() {}
 
     private fun gotoWelcome() {
         Intent(this@SplashActivity, WelcomeActivity::class.java).apply {
-            this.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             val optionsCompat =
                 ActivityOptionsCompat.makeSceneTransitionAnimation(
                     this@SplashActivity,
                      binding.layoutContent,
-                    "logo")
+                    "transitLogo")
             startActivity(this, optionsCompat.toBundle())
         }
-    }
-
-    override fun setUpObserver() {
     }
 
 }
