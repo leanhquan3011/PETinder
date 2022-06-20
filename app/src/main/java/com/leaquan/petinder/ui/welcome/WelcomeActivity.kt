@@ -4,19 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
+import com.google.android.material.tabs.TabLayoutMediator
 import com.leaquan.petinder.App
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
+import com.leaquan.petinder.base.adapter.BasePagerAdapter
 import com.leaquan.petinder.databinding.ActivityWelcomeBinding
 import com.leaquan.petinder.ui.login.LoginActivity
-import com.leaquan.petinder.ui.welcome.adapter.DescriptionPagerAdapter
-import com.leaquan.petinder.ui.welcome.adapter.WelcomeDesc
+import com.leaquan.petinder.ui.welcome.fragments.Item1
+import com.leaquan.petinder.ui.welcome.fragments.Item2
+import com.leaquan.petinder.ui.welcome.fragments.Item3
+import com.leaquan.petinder.util.Constant.Companion.AnimationDuration.ANIMATION_LONG
 import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.type.StateViewPager
+import com.leaquan.petinder.util.view_pager.setCurrentItem
+
 
 class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
-
-    private lateinit var pagerAdapter: DescriptionPagerAdapter
-    private lateinit var desc : ArrayList<WelcomeDesc>
 
     override fun inflateLayout(): Int = R.layout.activity_welcome
 
@@ -31,24 +35,28 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
         setUpAnimViewPager()
         setUpAnimButton()
         setUpActionButton()
-        mocksData()
-
     }
 
     private fun setUpActionButton() {
         with(binding) {
             btnAction.onClick {
                 when(pagerContent.currentItem) {
-                    0 -> {//IN_PREVIEW
-                        pagerContent.currentItem = 1
+
+                    StateViewPager.IN_PREVIEW.value -> {
+                        pagerContent.setCurrentItem(
+                            item = 1,
+                            duration = ANIMATION_LONG.value
+                        )
                     }
-                    1 -> {//END_PREVIEW
-                        pagerContent.currentItem = 2
+                    StateViewPager.END_PREVIEW.value -> {
+                        pagerContent.setCurrentItem(
+                            item = 2,
+                            duration = ANIMATION_LONG.value
+                        )
                         btnAction.text = App.getString(R.string.lets_do_it)
                     }
-                    2 -> {//ACTION
-                        gotoLogin()
-                    }
+                    
+                    StateViewPager.ACTION.value -> { gotoLogin() }
                 }
             }
         }
@@ -66,9 +74,9 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun setUpAnimSharedElement() {
-        window.sharedElementEnterTransition.duration = 650
+        window.sharedElementEnterTransition.duration = ANIMATION_LONG.value
         window.sharedElementReturnTransition.apply {
-            this.duration = 650
+            this.duration = ANIMATION_LONG.value
             this.interpolator = DecelerateInterpolator()
         }
     }
@@ -87,41 +95,24 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun setUpViewPager() {
-        pagerAdapter = DescriptionPagerAdapter(arrayListOf())
-        desc = arrayListOf()
         binding.pagerContent.apply {
-            currentItem = 0
-            adapter = pagerAdapter
-            beginFakeDrag()
-        }.also {
-            binding.tabIndicator.setupWithViewPager(it)
-            binding.tabIndicator.isClickable = false
-            binding.tabIndicator.isEnabled = false
+            adapter = BasePagerAdapter(
+                this@WelcomeActivity,
+                listOf(
+                    Item1(),
+                    Item2(),
+                    Item3()
+                )
+            )
+
+            TabLayoutMediator(binding.tabIndicator, this) {
+                tab, _ ->
+                tab.view.isEnabled = false
+            }.attach()
+
+            this.rootView.isEnabled = false
         }
     }
-
-    private fun mocksData() {
-        desc.add (
-            WelcomeDesc(
-                R.drawable.img_welcom1,
-                App.getString(R.string.description_title1),
-                App.getString(R.string.description_content1)
-            )
-        )
-        desc.add(
-            WelcomeDesc(
-                R.drawable.img_welcom2,
-                App.getString(R.string.description_title2),
-                App.getString(R.string.description_content2)
-            )
-        )
-        desc.add(
-            WelcomeDesc(
-                R.drawable.img_welcom3,
-                App.getString(R.string.description_title3),
-                App.getString(R.string.description_content3)
-            )
-        )
-        pagerAdapter.submitList(desc)
-    }
 }
+
+
