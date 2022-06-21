@@ -31,10 +31,10 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
     abstract fun inflateLayout(): Int
 
     @AnimRes
-    open val animationEnter : Int = R.anim.anim_blank
+    open val animationEnter : Int = R.anim.blank
 
     @AnimRes
-    open val animationLeave : Int = R.anim.anim_blank
+    open val animationLeave : Int = R.anim.blank
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +44,7 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
         setUpObserver()
     }
 
+    //status bar -> white
     open fun enableLightStatusBar(){
         val window = window
         val decorView: View = window.decorView
@@ -51,6 +52,14 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
             wic.isAppearanceLightStatusBars = true // true or false as desired.
         }
         window.statusBarColor = customStatusBarColor
+    }
+
+    //custom status bar -> primary color
+    open fun setDefaultStatusBarColor(){
+        window.also {
+            it.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            it.statusBarColor = getColor(R.color.colorPrimaryDark)
+        }
     }
 
     open fun hideSystemUI(){

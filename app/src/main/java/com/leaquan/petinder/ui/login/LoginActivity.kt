@@ -9,10 +9,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
     override fun inflateLayout(): Int = R.layout.activity_login
 
     override fun setUp() {
-
+        setDefaultStatusBarColor()
     }
 
     override fun setUpObserver() {
-
     }
 }

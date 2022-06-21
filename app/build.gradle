@@ -59,7 +59,7 @@ dependencies {
     //implement constrain 2.0 to use Motion layout
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
 
-    //circle imagview
+    //circle image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //glide load image

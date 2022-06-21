@@ -14,8 +14,8 @@ import com.leaquan.petinder.ui.login.LoginActivity
 import com.leaquan.petinder.ui.welcome.fragments.Item1
 import com.leaquan.petinder.ui.welcome.fragments.Item2
 import com.leaquan.petinder.ui.welcome.fragments.Item3
-import com.leaquan.petinder.util.Constant.Companion.AnimationDuration.ANIMATION_LONG
 import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.type.AnimationDuration
 import com.leaquan.petinder.util.type.StateViewPager
 import com.leaquan.petinder.util.view_pager.setCurrentItem
 
@@ -45,13 +45,13 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
                     StateViewPager.IN_PREVIEW.value -> {
                         pagerContent.setCurrentItem(
                             item = 1,
-                            duration = ANIMATION_LONG.value
+                            duration = AnimationDuration.LONG.value
                         )
                     }
                     StateViewPager.END_PREVIEW.value -> {
                         pagerContent.setCurrentItem(
                             item = 2,
-                            duration = ANIMATION_LONG.value
+                            duration = AnimationDuration.LONG.value
                         )
                         btnAction.text = App.getString(R.string.lets_do_it)
                     }
@@ -74,22 +74,22 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun setUpAnimSharedElement() {
-        window.sharedElementEnterTransition.duration = ANIMATION_LONG.value
+        window.sharedElementEnterTransition.duration = AnimationDuration.LONG.value
         window.sharedElementReturnTransition.apply {
-            this.duration = ANIMATION_LONG.value
+            this.duration = AnimationDuration.LONG.value
             this.interpolator = DecelerateInterpolator()
         }
     }
 
     private fun setUpAnimViewPager() {
-        AnimationUtils.loadAnimation(this@WelcomeActivity, R.anim.anim_enter_pager).also {
+        AnimationUtils.loadAnimation(this@WelcomeActivity, R.anim.sliding_in_left_long).also {
             binding.pagerContent.animation = it
             binding.tabIndicator.animation = it
         }
     }
 
     private fun setUpAnimButton() {
-        AnimationUtils.loadAnimation(this@WelcomeActivity, R.anim.anim_fade_in).also {
+        AnimationUtils.loadAnimation(this@WelcomeActivity, R.anim.fade_in).also {
             binding.btnAction.animation = it
         }
     }
@@ -110,7 +110,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
                 tab.view.isEnabled = false
             }.attach()
 
-            this.rootView.isEnabled = false
+            beginFakeDrag()
         }
     }
 }

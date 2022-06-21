@@ -7,7 +7,7 @@ import android.util.AttributeSet
 import androidx.annotation.Nullable
 import androidx.annotation.StyleRes
 import com.leaquan.petinder.R
-import com.leaquan.petinder.util.type.FontType
+import com.leaquan.petinder.util.type.EnumValue
 
 class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
 
@@ -25,8 +25,8 @@ class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
 
     private fun init(context: Context, attrs: AttributeSet?) {
         val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.TextViewPET)
-        val textStyle = typedArray.getInt(R.styleable.TextViewPET_fontType, FontType.NORMAL.type)
-        setTitleStyle(FontType.valueOf(textStyle))
+        val textStyle = typedArray.getInt(R.styleable.TextViewPET_fontType, EnumValue.NORMAL.type)
+        setTitleStyle(EnumValue.valueOf(textStyle))
         typedArray.recycle()
     }
 
@@ -34,22 +34,22 @@ class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
         setTypeface(typeface, fontType)
     }
 
-    fun setTitleStyle(style: FontType){
+    fun setTitleStyle(style: EnumValue){
 
         when(style){
-            FontType.TITLE ->{
+            EnumValue.TITLE ->{
                 typeface = Typeface.create(resources.getFont(R.font.baloobhaina_regular), Typeface.BOLD)
             }
-            FontType.NORMAL ->{
+            EnumValue.NORMAL ->{
                 typeface = Typeface.create(resources.getFont(R.font.nuby_semibold), Typeface.NORMAL)
             }
-            FontType.BOLD ->{
+            EnumValue.BOLD ->{
                 typeface = Typeface.create(resources.getFont(R.font.nuby_bold), Typeface.BOLD_ITALIC)
             }
-            FontType.EXTRA_BOLD ->{
+            EnumValue.EXTRA_BOLD ->{
                 typeface = Typeface.create(resources.getFont(R.font.nuby_extrabold), Typeface.BOLD_ITALIC)
             }
-            FontType.ITALIC ->{
+            EnumValue.ITALIC ->{
                 typeface = Typeface.create(resources.getFont(R.font.nuby_light), Typeface.ITALIC)
             }
         }
