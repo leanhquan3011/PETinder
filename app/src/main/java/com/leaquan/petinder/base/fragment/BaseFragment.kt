@@ -8,11 +8,17 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
 import com.leaquan.petinder.base.view.BaseView
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
 
-abstract class BaseFragment <DB : ViewDataBinding> : androidx.fragment.app.Fragment(), BaseView {
+abstract class BaseFragment <DB : ViewDataBinding> : Fragment(), BaseView, KodeinAware {
 
     open lateinit var binding : DB
+
+    override val kodein: Kodein by kodein()
 
     @LayoutRes
     abstract fun inflateLayout(): Int

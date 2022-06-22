@@ -4,39 +4,37 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Typeface
 import android.util.AttributeSet
-import androidx.annotation.Nullable
-import androidx.annotation.StyleRes
 import com.leaquan.petinder.App
 import com.leaquan.petinder.R
 import com.leaquan.petinder.util.type.EnumValue
 
-class TextViewPET : androidx.appcompat.widget.AppCompatTextView {
 
-    constructor(context: Context): super(context){
+class EdittextPET : androidx.appcompat.widget.AppCompatEditText {
+
+    constructor(context: Context) : super(context) {
         init(context, null)
     }
 
-    constructor(context: Context, @Nullable attrs: AttributeSet): super(context, attrs){
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         init(context, attrs)
     }
 
-    constructor(context: Context, @Nullable attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr){
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init(context, attrs)
     }
 
-    private fun init(context: Context, attrs: AttributeSet?) {
-        val typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.TextViewPET)
-        val textStyle = typedArray.getInt(R.styleable.TextViewPET_fontType, EnumValue.NORMAL.type)
-        setTitleStyle(EnumValue.valueOf(textStyle))
-        typedArray.recycle()
+    private fun init(ctx : Context, attrs: AttributeSet?) {
+        val typeArray : TypedArray = ctx.obtainStyledAttributes(attrs, R.styleable.EdittextPET)
+        val textStyle = typeArray.getInt(R.styleable.EdittextPET_fontType, EnumValue.NORMAL.type)
+        setFontType(EnumValue.valueOf(textStyle))
+        typeArray.recycle()
     }
 
-    fun setFontType(@StyleRes fontType: Int){
-        setTypeface(typeface, fontType)
-    }
-
-    fun setTitleStyle(style: EnumValue){
-
+    private fun setFontType(style: EnumValue) {
         when(style){
             EnumValue.TITLE ->{
                 typeface = Typeface.create(App.getResources().getFont(R.font.baloobhaina_regular), Typeface.BOLD)

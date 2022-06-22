@@ -9,9 +9,11 @@
     <color name="white">#FFFFFF</color>
     <color name="grey">#CC787878</color>
 
-    <color name="textColorBlack">#A8000000</color>
-    <color name="textColorGrey">#B38C8C8C</color>
+    <color name="text_black">#A8000000</color>
+    <color name="text_grey">#B38C8C8C</color>
 
-    <color name="dotDefault">#B3C8C8C8</color>
-    <color name="dotSelected">#CCFFFFFF</color>
+    <color name="un_selected">#B3C8C8C8</color>
+    <color name="selected">#CCFFFFFF</color>
+
+    <color name="gray_CCB5">#CCB5B5B5</color>
 </resources>

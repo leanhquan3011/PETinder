@@ -57,12 +57,16 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.0.0"
 
     //implement constrain 2.0 to use Motion layout
-    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //circle image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //glide load image
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //KODEIN DI
+    implementation "org.kodein.di:kodein-di-generic-jvm:6.2.1"
+    implementation "org.kodein.di:kodein-di-framework-android-x:6.2.1"
 
 }

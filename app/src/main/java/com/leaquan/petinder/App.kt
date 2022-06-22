@@ -6,9 +6,19 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
+import com.leaquan.petinder.di.appModule
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.androidXModule
 
 //when extends Application must declare in Manifest
-class App : Application() {
+class App : Application(), KodeinAware {
+
+    //todo : docs for this and make this clear
+    override val kodein = Kodein.lazy {
+        import(androidXModule((this@App)))
+        import(appModule)
+    }
 
     override fun onCreate() {
         super.onCreate()

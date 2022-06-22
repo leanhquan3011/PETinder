@@ -4,15 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/background_button_gradient.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/background_button_gradient_border.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/background_button_white.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/background_edittext.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/background_gradient_vertical.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/background_primary_gradient_vectical.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/background_primary_gradient_vertical.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/bg_pager_selected_dot.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/ic_app_icon.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_facebook.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_google.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_hide_password.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/ic_show_password.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/item_default_dot.xml" value="0.114" />
+        <entry key="app/src/main/res/drawable/item_selected_dot.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/viewpager_tab_selector.xml" value="0.114" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.184375" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.24552307128906253" />
         <entry key="app/src/main/res/layout/item_description.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_welcome.xml" value="0.37604166666666666" />
       </map>

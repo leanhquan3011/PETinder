@@ -7,7 +7,7 @@ import kotlin.coroutines.CoroutineContext
 
 abstract class BaseViewModel : ViewModel() {
 
-    //TODO("Not yet research")
+    //TODO: Make this clear (JOB, ViewModel)
     
     private var job: Job = Job()
     var ioContext: CoroutineContext = Dispatchers.IO + job

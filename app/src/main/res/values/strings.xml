@@ -14,4 +14,12 @@
     <string name="description_content2">No one is happy when lonely, and neither should yours pets</string>
     <string name="description_title3">Yours Pet needs\na Relationship</string>
     <string name="description_content3">No one is happy when lonely, and neither should yours pets</string>
+
+    <!--Login-->
+    <string name="login">Log In</string>
+    <string name="hint_email">Email@gmail.com</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_with">Log in with</string>
+    <string name="register">Create account</string>
 </resources>

@@ -15,6 +15,11 @@
 
     <declare-styleable name="ButtonPET">
         <attr name="fontType"/>
+        <attr name="gradientText" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="EdittextPET">
+        <attr name="fontType"/>
     </declare-styleable>
 
 </resources>

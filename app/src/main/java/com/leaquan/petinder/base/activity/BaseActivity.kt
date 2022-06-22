@@ -15,10 +15,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.view.BaseView
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
 
-abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseView {
+abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseView, KodeinAware {
 
     open lateinit var binding: DB
+
+    override val kodein by  kodein()
 
     override fun provideRootView(): View? = binding.root
 

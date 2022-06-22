@@ -6,7 +6,7 @@ import android.animation.ValueAnimator
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.viewpager2.widget.ViewPager2
 
-//todo : make this function clear
+//todo : make this clear
 fun ViewPager2.setCurrentItem(
     item: Int,
     duration: Long,
