@@ -11,7 +11,6 @@ import org.kodein.di.generic.bind
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
-// TODO: Make this clear
 const val VIEW_MODEL_MODULE = "view_model_module"
 
 val viewModelModule = Kodein.Module(VIEW_MODEL_MODULE, false) {

@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModelProvider
 import org.kodein.di.DKodein
 import org.kodein.di.generic.instanceOrNull
 
+// TODO: Make this clear 
+//this KODEIN Injection setup
 @Suppress("UNCHECKED_CAST")
 class ViewModelFactory(private val injector : DKodein) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -12,3 +14,17 @@ class ViewModelFactory(private val injector : DKodein) : ViewModelProvider.Facto
             ?: modelClass.newInstance())
     }
 }
+
+
+
+/*this factory setup
+
+* class LessonPracticeViewModelFactory: ViewModelProvider.Factory  {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(LessonPracticeViewModel::class.java)) {
+            return LessonPracticeViewModel() as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel Class")
+    }
+}
+*/

@@ -14,7 +14,7 @@ import org.kodein.di.android.x.androidXModule
 //when extends Application must declare in Manifest
 class App : Application(), KodeinAware {
 
-    //todo : docs for this and make this clear
+    //bind to kodein instance in application class.
     override val kodein = Kodein.lazy {
         import(androidXModule((this@App)))
         import(appModule)
