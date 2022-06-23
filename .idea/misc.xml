@@ -23,12 +23,16 @@
         <entry key="app/src/main/res/drawable/item_default_dot.xml" value="0.114" />
         <entry key="app/src/main/res/drawable/item_selected_dot.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/viewpager_tab_selector.xml" value="0.114" />
+        <entry key="app/src/main/res/layout/activity_checkin.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.184375" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_forgot_password.xml" value="0.32400970458984374" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.24552307128906253" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.359375" />
         <entry key="app/src/main/res/layout/item_description.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_welcome.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/layout_item_social.xml" value="0.359375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app.xml" value="0.1755" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_app_round.xml" value="0.1755" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1755" />

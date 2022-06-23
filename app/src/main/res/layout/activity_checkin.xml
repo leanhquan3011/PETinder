@@ -11,10 +11,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_header"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
             android:background="@drawable/background_gradient_vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -42,14 +41,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_title" />
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!--FrameLayout contain asleast 2 fragment-->
+        <!--FrameLayout contain atleast 2 fragment-->
         <FrameLayout
             android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_40dp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_header" />
 
     </androidx.constraintlayout.motion.widget.MotionLayout>

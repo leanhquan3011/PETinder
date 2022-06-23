@@ -2,7 +2,7 @@ package com.leaquan.petinder.di
 
 
 import androidx.lifecycle.ViewModelProvider
-import com.leaquan.petinder.ui.login.login.LoginViewModel
+import com.leaquan.petinder.ui.check_in.login.LoginViewModel
 import com.leaquan.petinder.util.view_model.ViewModelFactory
 import com.leaquan.petinder.util.view_model.bindViewModel
 import org.kodein.di.Kodein

@@ -1,13 +1,11 @@
-package com.leaquan.petinder.ui.login.login
+package com.leaquan.petinder.ui.check_in.login
 
-import androidx.lifecycle.ViewModelProvider
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.fragment.BaseFragmentMVVM
 import com.leaquan.petinder.databinding.FragmentLoginBinding
 import com.leaquan.petinder.util.view_model.kodeinViewModel
 import com.leaquan.petinder.util.extension.WTF
 import com.leaquan.petinder.util.text.gradientText
-import com.leaquan.petinder.util.view_model.ViewModelFactory
 
 class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
 

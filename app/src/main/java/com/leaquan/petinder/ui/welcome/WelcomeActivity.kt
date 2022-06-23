@@ -10,7 +10,7 @@ import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
 import com.leaquan.petinder.base.adapter.BasePagerAdapter
 import com.leaquan.petinder.databinding.ActivityWelcomeBinding
-import com.leaquan.petinder.ui.login.LoginActivity
+import com.leaquan.petinder.ui.check_in.CheckInActivity
 import com.leaquan.petinder.ui.welcome.fragments.Item1
 import com.leaquan.petinder.ui.welcome.fragments.Item2
 import com.leaquan.petinder.ui.welcome.fragments.Item3
@@ -63,7 +63,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun gotoLogin() {
-        Intent(this@WelcomeActivity, LoginActivity::class.java).apply {
+        Intent(this@WelcomeActivity, CheckInActivity::class.java).apply {
             startActivity(this)
             finish()
         }
