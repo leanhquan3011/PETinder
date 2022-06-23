@@ -5,7 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.leaquan.petinder.ui.custom_view.TextViewPET
             android:id="@+id/tv_title"
@@ -16,26 +16,37 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/edt_email"
-            app:layout_constraintVertical_chainStyle="spread"
             style="@style/TextViewPET.SubTitle.Black"/>
 
         <com.leaquan.petinder.ui.custom_view.EdittextPET
             android:id="@+id/edt_email"
             android:hint="@string/hint_email"
+            android:layout_marginTop="@dimen/_30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"
-            app:layout_constraintBottom_toTopOf="@id/edt_password"
             style="@style/EdittextPET.Default"/>
+
+        <com.leaquan.petinder.ui.custom_view.TextViewPET
+            android:id="@+id/tv_err_msg_email"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:textColor="@color/red_5e"
+            android:textSize="@dimen/_12sp"
+            android:visibility="gone"
+            android:text="lỗi rồi nha mạy"
+            app:layout_constraintStart_toStartOf="@id/edt_email"
+            app:layout_constraintEnd_toEndOf="@id/edt_email"
+            app:layout_constraintTop_toBottomOf="@id/edt_email"/>
 
         <com.leaquan.petinder.ui.custom_view.EdittextPET
             android:id="@+id/edt_password"
             android:hint="@string/hint_password"
+            android:layout_marginTop="@dimen/_16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edt_email"
-            app:layout_constraintBottom_toTopOf="@id/tv_forgot_password"
+            app:layout_constraintTop_toBottomOf="@id/tv_err_msg_email"
             style="@style/EdittextPET.Default"/>
         
         <androidx.appcompat.widget.AppCompatImageView
@@ -50,20 +61,35 @@
             app:layout_constraintBottom_toBottomOf="@id/edt_password"/>
 
         <com.leaquan.petinder.ui.custom_view.TextViewPET
+            android:id="@+id/tv_err_msg_password"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:textColor="@color/red_5e"
+            android:text="lỗi rồi nha mạy"
+            android:visibility="gone"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/edt_password"
+            app:layout_constraintEnd_toEndOf="@id/edt_password"
+            app:layout_constraintTop_toBottomOf="@id/edt_password"/>
+
+        <com.leaquan.petinder.ui.custom_view.TextViewPET
             android:id="@+id/tv_forgot_password"
             android:text="@string/forgot_password"
-            app:layout_constraintTop_toBottomOf="@id/edt_password"
+            android:layout_marginTop="@dimen/_16dp"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_err_msg_password"
             app:layout_constraintStart_toStartOf="@id/edt_password"
-            app:layout_constraintBottom_toTopOf="@id/btn_login"
             style="@style/TextViewPET"/>
 
         <com.leaquan.petinder.ui.custom_view.ButtonPET
             android:id="@+id/btn_login"
             android:text="@string/login"
+            android:layout_marginTop="@dimen/_30dp"
+            android:paddingBottom="@dimen/_4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_forgot_password"
-            app:layout_constraintBottom_toTopOf="@id/tv_login_with"
             style="@style/ButtonPET.Gradient"/>
 
         <View
@@ -82,10 +108,10 @@
             android:text="@string/login_with"
             android:textColor="@color/text_grey"
             android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_30dp"
             app:layout_constraintStart_toEndOf="@id/view_separator_1"
             app:layout_constraintTop_toBottomOf="@id/btn_login"
             app:layout_constraintEnd_toStartOf="@id/view_separator_2"
-            app:layout_constraintBottom_toTopOf="@id/btn_google"
             style="@style/TextViewPET"/>
 
         <View
@@ -112,10 +138,10 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btn_google"
             android:src="@drawable/ic_google"
+            android:layout_margin="@dimen/_30dp"
             app:layout_constraintStart_toEndOf="@id/btn_facebook"
             app:layout_constraintEnd_toStartOf="@id/btn_phone"
             app:layout_constraintTop_toBottomOf="@id/tv_login_with"
-            app:layout_constraintBottom_toTopOf="@id/btn_register"
             style="@style/ImageView.ImageButton"/>
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -130,15 +156,16 @@
 
         <com.leaquan.petinder.ui.custom_view.ButtonPET
             android:id="@+id/btn_register"
-            android:text="@string/register"
-            android:layout_marginTop="@dimen/_16dp"
+            style="@style/ButtonPET.Gradient.Border"
+            android:layout_marginTop="@dimen/_60dp"
+            android:layout_marginBottom="@dimen/_16dp"
             android:paddingBottom="@dimen/_8dp"
+            android:text="@string/register"
             app:gradientText="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_google"
             app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/ButtonPET.Gradient.Border"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_google"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

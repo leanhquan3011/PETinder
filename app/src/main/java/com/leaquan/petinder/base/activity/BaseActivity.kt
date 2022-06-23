@@ -15,8 +15,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.view.BaseView
+import com.leaquan.petinder.util.Constant
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
+import android.view.WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN as FLAG_FORCE_NOT_FULLSCREEN
 
 abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseView, KodeinAware {
 
@@ -35,10 +37,10 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
     abstract fun inflateLayout(): Int
 
     @AnimRes
-    open val animationEnter : Int = R.anim.blank
+    open val animationEnter : Int = Constant.DEFAULT_ANIMATION
 
     @AnimRes
-    open val animationLeave : Int = R.anim.blank
+    open val animationLeave : Int = Constant.DEFAULT_ANIMATION
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

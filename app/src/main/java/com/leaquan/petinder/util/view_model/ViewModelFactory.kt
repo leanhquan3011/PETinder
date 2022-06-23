@@ -5,8 +5,11 @@ import androidx.lifecycle.ViewModelProvider
 import org.kodein.di.DKodein
 import org.kodein.di.generic.instanceOrNull
 
-// TODO: Make this clear 
-//this KODEIN Injection setup
+/**
+ * this ViewModelFactory authority for KodeinDI.direct instance create viewModel
+ * @param -Kodein-DI
+ * @return instance of this
+ */
 @Suppress("UNCHECKED_CAST")
 class ViewModelFactory(private val injector : DKodein) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -18,8 +21,8 @@ class ViewModelFactory(private val injector : DKodein) : ViewModelProvider.Facto
 
 
 /*this factory setup
-
-* class LessonPracticeViewModelFactory: ViewModelProvider.Factory  {
+TODO : add base for this viewModel factory -> reified and inLine
+* class LessonPracticeViewModelFactory : ViewModelProvider.Factory  {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(LessonPracticeViewModel::class.java)) {
             return LessonPracticeViewModel() as T
