@@ -21,7 +21,7 @@ class ViewModelFactory(private val injector : DKodein) : ViewModelProvider.Facto
 
 
 /*this factory setup
-TODO : add base for this viewModel factory -> reified and inLine
+TODO
 * class LessonPracticeViewModelFactory : ViewModelProvider.Factory  {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(LessonPracticeViewModel::class.java)) {
@@ -31,3 +31,4 @@ TODO : add base for this viewModel factory -> reified and inLine
     }
 }
 */
+

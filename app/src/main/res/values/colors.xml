@@ -5,9 +5,11 @@
     <color name="colorPrimaryDark">#F17E6A</color>
 
     <color name="black">#000000</color>
-    <color name="red">#F80000</color>
+    <color name="red">#FE5C5C</color>
     <color name="white">#FFFFFF</color>
     <color name="grey">#CC787878</color>
+    <color name="orange">#FCA028</color>
+    <color name="green">#00B876</color>
 
     <color name="text_black">#A8000000</color>
     <color name="text_grey">#B38C8C8C</color>
@@ -15,6 +17,8 @@
     <color name="un_selected">#B3C8C8C8</color>
     <color name="selected">#CCFFFFFF</color>
 
-    <color name="gray_CCB5">#CCB5B5B5</color>
+    <color name="gray_ccb5">#CCB5B5B5</color>
+    <color name="very_light_gray">#dfdfdf</color>
     <color name="red_5e">#EE4C5E</color>
+
 </resources>

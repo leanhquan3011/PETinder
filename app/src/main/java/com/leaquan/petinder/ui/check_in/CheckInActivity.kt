@@ -13,7 +13,9 @@ class CheckInActivity : BaseActivity<ActivityCheckinBinding>() {
 
     override fun setUp() {
         pushFragment(
-            LoginFragment()
+            LoginFragment.instance(
+                this.packageName.toString()
+            )
         )
         setDefaultStatusBarColor()
     }

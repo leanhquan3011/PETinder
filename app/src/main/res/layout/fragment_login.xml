@@ -108,7 +108,7 @@
             android:id="@+id/btn_register"
             style="@style/ButtonPET.Gradient.Border"
             android:layout_marginBottom="@dimen/_30dp"
-            android:paddingBottom="@dimen/_4dp"
+            android:paddingBottom="@dimen/_8dp"
             android:text="@string/create_account"
             app:gradientText="true"
             app:layout_constraintBottom_toBottomOf="parent"
