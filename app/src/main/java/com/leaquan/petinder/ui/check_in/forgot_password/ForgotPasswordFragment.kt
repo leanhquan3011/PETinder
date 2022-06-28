@@ -39,4 +39,5 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
 
     override fun setUpObserver() {
     }
+    
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "681634388205",
+    "project_id": "petinder-791c4",
+    "storage_bucket": "petinder-791c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681634388205:android:9a2946728ebef2cfdc54e4",
+        "android_client_info": {
+          "package_name": "com.leaquan.petinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681634388205-q5v19fq643hpjhpuo2bmijq9fs52dmuv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.leaquan.petinder",
+            "certificate_hash": "6ad225859277229140067f8e70690b4c8211f553"
+          }
+        },
+        {
+          "client_id": "681634388205-8njf1h739th6esherm8cckjj75j1fhuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdsXRWc-jHBp9jvD6AUtVZScU90ZF43Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681634388205-8njf1h739th6esherm8cckjj75j1fhuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

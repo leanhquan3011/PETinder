@@ -51,7 +51,7 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
             }
 
             ivShowPassword.onClick {
-                edtPassword.transformation(ivShowPassword)
+                edtPassword.transformation(it)
             }
 
             btnLogin.onClick {
@@ -75,8 +75,6 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
             layoutSocial.btnPhone.onClick {
                 ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!", LONG, ERROR)?.show()
             }
-
-            WTF(from + activity?.supportFragmentManager?.backStackEntryCount.toString())
         }
     }
 

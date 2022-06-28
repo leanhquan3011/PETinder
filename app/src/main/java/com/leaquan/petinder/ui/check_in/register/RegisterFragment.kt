@@ -11,7 +11,9 @@ import com.leaquan.petinder.ui.check_in.login.LoginFragment.Companion.FROM
 import com.leaquan.petinder.ui.custom_view.ToastPET
 import com.leaquan.petinder.util.Toast
 import com.leaquan.petinder.util.extension.WTF
+import com.leaquan.petinder.util.extension.onClick
 import com.leaquan.petinder.util.text.setLoginText
+import com.leaquan.petinder.util.view_extension.transformation
 import com.leaquan.petinder.util.view_model.kodeinViewModel
 
 class RegisterFragment : BaseFragmentMVVM<FragmentRegisterBinding, RegisterViewModel>() {
@@ -33,15 +35,23 @@ class RegisterFragment : BaseFragmentMVVM<FragmentRegisterBinding, RegisterViewM
     override val viewModel: RegisterViewModel by kodeinViewModel()
 
     override fun setUp() {
-        WTF(from + activity?.supportFragmentManager?.backStackEntryCount.toString())
-
         with(binding) {
+
+            ivShowPassword.onClick {
+                edtPassword.transformation(it)
+            }
+
+            ivShowConfirmPassword.onClick {
+                edtConfirmPassword.transformation(it)
+            }
+
             tvHaveAccount.setLoginText(object : ClickableSpan() {
                 override fun onClick(p0: View) {
                     ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!",
                         Toast.SHORT,
                         Toast.SUCCESS
                     )?.show()
+                    activity?.supportFragmentManager?.popBackStack()
                 }
 
                 override fun updateDrawState(ds: TextPaint) {
@@ -49,6 +59,27 @@ class RegisterFragment : BaseFragmentMVVM<FragmentRegisterBinding, RegisterViewM
                     ds.isUnderlineText = false
                 }
             })
+
+            layoutSocial.btnFacebook.onClick {
+                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!",
+                    Toast.LONG,
+                    Toast.SUCCESS
+                )?.show()
+            }
+
+            layoutSocial.btnGoogle.onClick {
+                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!",
+                    Toast.LONG,
+                    Toast.WARNING
+                )?.show()
+            }
+
+            layoutSocial.btnPhone.onClick {
+                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!",
+                    Toast.LONG,
+                    Toast.ERROR
+                )?.show()
+            }
         }
     }
 

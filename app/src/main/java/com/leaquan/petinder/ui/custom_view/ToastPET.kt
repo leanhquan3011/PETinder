@@ -32,11 +32,11 @@ open class ToastPET(context: Context?) : Toast(context) {
                 binding.toastType.setBackgroundResource(R.drawable.toast_success_shape)
             }
             WARNING -> {
-                binding.toastIcon.setImageResource(R.drawable.ic_warning_orange)
+                binding.toastIcon.setImageResource(R.drawable.ic_warning_transparent)
                 binding.toastType.setBackgroundResource(R.drawable.toast_warning_shape)
             }
             ERROR -> {
-                binding.toastIcon.setImageResource(R.drawable.ic_warning_transparent)
+                binding.toastIcon.setImageResource(R.drawable.ic_error_red)
                 binding.toastType.setBackgroundResource(R.drawable.toast_error_shape)
             }
         }
