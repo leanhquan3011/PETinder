@@ -7,7 +7,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.viewpager2.widget.ViewPager2
 
 //todo : make this clear
-fun ViewPager2.setCurrentItem(
+fun ViewPager2.currentItemWithAnimate(
     item: Int,
     duration: Long,
     interpolator: TimeInterpolator = AccelerateDecelerateInterpolator(),

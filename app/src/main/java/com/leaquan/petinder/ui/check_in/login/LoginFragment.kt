@@ -1,17 +1,16 @@
 package com.leaquan.petinder.ui.check_in.login
 
+import android.os.Bundle
 import androidx.core.os.bundleOf
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.fragment.BaseFragmentMVVM
 import com.leaquan.petinder.databinding.FragmentLoginBinding
 import com.leaquan.petinder.ui.check_in.forgot_password.ForgotPasswordFragment
 import com.leaquan.petinder.ui.check_in.register.RegisterFragment
-import com.leaquan.petinder.ui.custom_view.ToastPET
-import com.leaquan.petinder.util.Toast
-import com.leaquan.petinder.util.Toast.Companion.ERROR
-import com.leaquan.petinder.util.Toast.Companion.LONG
-import com.leaquan.petinder.util.Toast.Companion.SUCCESS
-import com.leaquan.petinder.util.Toast.Companion.WARNING
 import com.leaquan.petinder.util.view_extension.transformation
 import com.leaquan.petinder.util.view_model.kodeinViewModel
 import com.leaquan.petinder.util.extension.WTF
@@ -39,8 +38,25 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
 
     private val from by lazy { arguments?.getString(FROM) }
 
+    private lateinit var auth : FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        auth = Firebase.auth
+    }
+
+    override fun onStart() {
+        super.onStart()
+        var currentUser = auth.getCurrentUser()
+        //updateUI(currentUser);
+    }
+
     override fun setUp() {
         with(binding) {
+
+            val ToastCus = com.leaquan.petinder.util.type.Toast.Type.WARNING of com.leaquan.petinder.util.type.Toast.Duration.SHORT
+
+            WTF(ToastCus.toString())
 
             tvForgotPassword.gradientText()
 
@@ -65,18 +81,47 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
             }
 
             layoutSocial.btnFacebook.onClick {
-                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!", LONG, SUCCESS)?.show()
             }
 
             layoutSocial.btnGoogle.onClick {
-                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!", LONG, WARNING)?.show()
+
+                //authGoogle()
             }
 
             layoutSocial.btnPhone.onClick {
-                ToastPET(activity).makeText(activity,  "Đã chia sẽ cho thầy!", LONG, ERROR)?.show()
+
             }
         }
     }
+
+//    private fun authGoogle() {
+//        val googleCredential = oneTapClient.getSignInCredentialFromIntent(data)
+//        val idToken = googleCredential.googleIdToken
+//        when {
+//            idToken != null -> {
+//                // Got an ID token from Google. Use it to authenticate
+//                // with Firebase.
+//                val firebaseCredential = GoogleAuthProvider.getCredential(idToken, null)
+//                auth.signInWithCredential(firebaseCredential)
+//                    .addOnCompleteListener(this) { task ->
+//                        if (task.isSuccessful) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            Log.d(TAG, "signInWithCredential:success")
+//                            val user = auth.currentUser
+//                            updateUI(user)
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Log.w(TAG, "signInWithCredential:failure", task.exception)
+//                            updateUI(null)
+//                        }
+//                    }
+//            }
+//            else -> {
+//                // Shouldn't happen.
+//                Log.d(TAG, "No ID token!")
+//            }
+//        }
+//    }
 
     override fun setUpObserver() {
     }

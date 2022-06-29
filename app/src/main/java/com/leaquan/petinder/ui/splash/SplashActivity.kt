@@ -10,7 +10,7 @@ import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
 import com.leaquan.petinder.databinding.ActivitySplashBinding
 import com.leaquan.petinder.ui.welcome.WelcomeActivity
-import com.leaquan.petinder.util.type.AnimationDuration
+import com.leaquan.petinder.util.Constant.Companion.SPLASH_TIMER
 
 
 @SuppressLint("CustomSplashScreen")
@@ -28,7 +28,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         handler.postDelayed({
             gotoWelcome()
             finish()
-        }, AnimationDuration.SPLASH_TIMER.value)
+        }, SPLASH_TIMER)
     }
 
     override fun setUpObserver() {}

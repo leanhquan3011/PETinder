@@ -13,12 +13,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.google.android.material.snackbar.Snackbar
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.view.BaseView
+import com.leaquan.petinder.ui.custom_view.ToastPET
 import com.leaquan.petinder.util.Constant
+import com.leaquan.petinder.util.type.Toast.Type
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import android.view.WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN as FLAG_FORCE_NOT_FULLSCREEN
+import com.leaquan.petinder.util.type.Toast.Duration.SHORT
+import com.leaquan.petinder.util.type.Toast.Duration.LONG
 
 abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseView, KodeinAware {
 
@@ -48,6 +53,26 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
         overridePendingTransition(animationEnter, animationLeave)
         setUp()
         setUpObserver()
+    }
+
+    fun showSnackBar(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
+    }
+
+    fun showShortToast(message: String, type: Type) {
+        ToastPET(this).makeText(
+            this,
+            message,
+            type of SHORT
+        )?.show()
+    }
+
+    fun showLongToast(message: String, type: Type) {
+        ToastPET(this).makeText(
+            this,
+            message,
+            type of LONG
+        )?.show()
     }
 
     //status bar -> white

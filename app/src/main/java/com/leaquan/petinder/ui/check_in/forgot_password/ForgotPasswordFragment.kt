@@ -5,9 +5,7 @@ import com.leaquan.petinder.R
 import com.leaquan.petinder.base.fragment.BaseFragmentMVVM
 import com.leaquan.petinder.databinding.FragmentForgotPasswordBinding
 import com.leaquan.petinder.ui.check_in.login.LoginFragment.Companion.FROM
-import com.leaquan.petinder.util.extension.WTF
 import com.leaquan.petinder.util.extension.onClick
-import com.leaquan.petinder.util.pushFragment
 import com.leaquan.petinder.util.view_model.kodeinViewModel
 
 class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, ForgotPasswordViewModel>() {
@@ -29,7 +27,6 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
     private val from by lazy { arguments?.getString(FROM) }
 
     override fun setUp() {
-        WTF(from + activity?.supportFragmentManager?.backStackEntryCount.toString())
         with(binding) {
             btnSend.onClick {
                 activity?.supportFragmentManager?.popBackStack()

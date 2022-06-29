@@ -14,10 +14,12 @@ import com.leaquan.petinder.ui.check_in.CheckInActivity
 import com.leaquan.petinder.ui.welcome.fragments.Item1
 import com.leaquan.petinder.ui.welcome.fragments.Item2
 import com.leaquan.petinder.ui.welcome.fragments.Item3
+import com.leaquan.petinder.util.Constant.Companion.ACTION
+import com.leaquan.petinder.util.Constant.Companion.END_PREVIEW
+import com.leaquan.petinder.util.Constant.Companion.IN_PREVIEW
+import com.leaquan.petinder.util.Constant.Companion.LONG_ANIMATION
 import com.leaquan.petinder.util.extension.onClick
-import com.leaquan.petinder.util.type.AnimationDuration
-import com.leaquan.petinder.util.type.StateViewPager
-import com.leaquan.petinder.util.view_pager.setCurrentItem
+import com.leaquan.petinder.util.view_pager.currentItemWithAnimate
 
 
 class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
@@ -42,21 +44,21 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
             btnAction.onClick {
                 when(pagerContent.currentItem) {
 
-                    StateViewPager.IN_PREVIEW.value -> {
-                        pagerContent.setCurrentItem(
+                    IN_PREVIEW -> {
+                        pagerContent.currentItemWithAnimate(
                             item = 1,
-                            duration = AnimationDuration.LONG.value
+                            duration = LONG_ANIMATION
                         )
                     }
-                    StateViewPager.END_PREVIEW.value -> {
-                        pagerContent.setCurrentItem(
+                    END_PREVIEW -> {
+                        pagerContent.currentItemWithAnimate(
                             item = 2,
-                            duration = AnimationDuration.LONG.value
+                            duration = LONG_ANIMATION
                         )
                         btnAction.text = App.getString(R.string.lets_do_it)
                     }
                     
-                    StateViewPager.ACTION.value -> { gotoLogin() }
+                    ACTION -> { gotoLogin() }
                 }
             }
         }
@@ -74,9 +76,9 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     }
 
     private fun setUpAnimSharedElement() {
-        window.sharedElementEnterTransition.duration = AnimationDuration.LONG.value
+        window.sharedElementEnterTransition.duration = LONG_ANIMATION
         window.sharedElementReturnTransition.apply {
-            this.duration = AnimationDuration.LONG.value
+            this.duration = LONG_ANIMATION
             this.interpolator = DecelerateInterpolator()
         }
     }

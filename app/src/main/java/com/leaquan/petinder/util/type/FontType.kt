@@ -32,18 +32,3 @@ enum class EnumValue (val type : Int) {
         }
     }
 }
-
-
-enum class StateViewPager (val value : Int) {
-    IN_PREVIEW(0),
-    END_PREVIEW(1),
-    ACTION(2)
-}
-
-
-enum class AnimationDuration (val value : Long) {
-    SHORT(200),
-    MEDIUM(400),
-    LONG(600),
-    SPLASH_TIMER(1500)
-}

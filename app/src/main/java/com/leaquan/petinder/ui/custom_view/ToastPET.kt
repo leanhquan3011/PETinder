@@ -8,9 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.leaquan.petinder.R
 import com.leaquan.petinder.databinding.LayoutToastBinding
-import com.leaquan.petinder.util.Toast.Companion.ERROR
-import com.leaquan.petinder.util.Toast.Companion.SUCCESS
-import com.leaquan.petinder.util.Toast.Companion.WARNING
+import com.leaquan.petinder.util.type.Toast.ToastCus
 
 open class ToastPET(context: Context?) : Toast(context) {
 
@@ -19,27 +17,28 @@ open class ToastPET(context: Context?) : Toast(context) {
     open fun makeText(
         context: Context?,
         message: String?,
-        duration: Int,
-        type: Int,
+        t : ToastCus
     ): Toast? {
         val toast = Toast(context)
         binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.layout_toast, null, false)
         binding.toastText.text = message ?: ""
 
-        when (type) {
-            SUCCESS -> {
+        when (t.type.type) {
+            "SUCCESS" -> {
                 binding.toastIcon.setImageResource(R.drawable.ic_tick_green_white)
                 binding.toastType.setBackgroundResource(R.drawable.toast_success_shape)
             }
-            WARNING -> {
+            "WARNING" -> {
                 binding.toastIcon.setImageResource(R.drawable.ic_warning_transparent)
                 binding.toastType.setBackgroundResource(R.drawable.toast_warning_shape)
             }
-            ERROR -> {
+            "ERROR" -> {
                 binding.toastIcon.setImageResource(R.drawable.ic_error_red)
                 binding.toastType.setBackgroundResource(R.drawable.toast_error_shape)
             }
         }
+
+        this.duration = t.duration.duration
 
         toast.apply {
             view = binding.root
