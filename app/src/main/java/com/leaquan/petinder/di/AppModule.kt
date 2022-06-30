@@ -7,6 +7,7 @@ const val APP_MODULE = "app_module"
 /**  import all dependency modules here  */
 val appModule = Module(APP_MODULE, false) {
     import(viewModelModule)
+    import(firebaseModule)
 }
 
 /** singleTon()

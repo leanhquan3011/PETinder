@@ -1,4 +1,4 @@
-package com.leaquan.petinder.ui.check_in.verification
+package com.leaquan.petinder.ui.check_in.country_dialog
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

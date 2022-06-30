@@ -2,7 +2,6 @@ package com.leaquan.petinder.ui.check_in.login
 
 import android.os.Bundle
 import androidx.core.os.bundleOf
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -12,7 +11,7 @@ import com.leaquan.petinder.databinding.FragmentLoginBinding
 import com.leaquan.petinder.ui.check_in.forgot_password.ForgotPasswordFragment
 import com.leaquan.petinder.ui.check_in.register.RegisterFragment
 import com.leaquan.petinder.util.view_extension.transformation
-import com.leaquan.petinder.util.view_model.kodeinViewModel
+import com.leaquan.petinder.util.viewmodel.kodeinViewModel
 import com.leaquan.petinder.util.extension.WTF
 import com.leaquan.petinder.util.extension.onClick
 import com.leaquan.petinder.util.pushFragment
@@ -54,10 +53,6 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
     override fun setUp() {
         with(binding) {
 
-            val ToastCus = com.leaquan.petinder.util.type.Toast.Type.WARNING of com.leaquan.petinder.util.type.Toast.Duration.SHORT
-
-            WTF(ToastCus.toString())
-
             tvForgotPassword.gradientText()
 
             tvForgotPassword.onClick {
@@ -89,7 +84,7 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
             }
 
             layoutSocial.btnPhone.onClick {
-
+                activity?.pushFragment(ForgotPasswordFragment())
             }
         }
     }

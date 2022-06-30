@@ -19,8 +19,8 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     override fun inflateLayout(): Int = R.layout.activity_splash
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        hideSystemUI()
         super.onCreate(savedInstanceState)
+        setDefaultStatusBarColor()
     }
 
     override fun setUp() {

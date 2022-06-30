@@ -1,4 +1,4 @@
-package com.leaquan.petinder.ui.check_in.verification.model
+package com.leaquan.petinder.ui.check_in.country_dialog.model
 
 class Countries {
     val COUNTRIES: ArrayList<Country> = ArrayList()

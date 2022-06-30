@@ -7,7 +7,7 @@ import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.graphics.Typeface
 import android.util.AttributeSet
-import com.leaquan.petinder.App
+import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
 import com.leaquan.petinder.util.type.EnumValue
 
@@ -49,26 +49,26 @@ class ButtonPET : androidx.appcompat.widget.AppCompatButton {
 
             this.paint.shader = textShader
 
-            this.setTextColor(App.getResources().getColor(R.color.colorPrimary))
+            this.setTextColor(PETinderApplication.getResources().getColor(R.color.colorPrimary))
         }
     }
 
     private fun setFontType(style: EnumValue) {
         when(style){
             EnumValue.TITLE ->{
-                typeface = Typeface.create(App.getResources().getFont(R.font.baloobhaina_regular), Typeface.BOLD)
+                typeface = Typeface.create(PETinderApplication.getResources().getFont(R.font.baloobhaina_regular), Typeface.BOLD)
             }
             EnumValue.NORMAL ->{
-                typeface = Typeface.create(App.getResources().getFont(R.font.nuby_semibold), Typeface.NORMAL)
+                typeface = Typeface.create(PETinderApplication.getResources().getFont(R.font.nuby_semibold), Typeface.NORMAL)
             }
             EnumValue.BOLD ->{
-                typeface = Typeface.create(App.getResources().getFont(R.font.nuby_bold), Typeface.BOLD_ITALIC)
+                typeface = Typeface.create(PETinderApplication.getResources().getFont(R.font.nuby_bold), Typeface.BOLD_ITALIC)
             }
             EnumValue.EXTRA_BOLD ->{
-                typeface = Typeface.create(App.getResources().getFont(R.font.nuby_extrabold), Typeface.BOLD_ITALIC)
+                typeface = Typeface.create(PETinderApplication.getResources().getFont(R.font.nuby_extrabold), Typeface.BOLD_ITALIC)
             }
             EnumValue.ITALIC ->{
-                typeface = Typeface.create(App.getResources().getFont(R.font.nuby_light), Typeface.ITALIC)
+                typeface = Typeface.create(PETinderApplication.getResources().getFont(R.font.nuby_light), Typeface.ITALIC)
             }
         }
     }

@@ -9,7 +9,7 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.leaquan.petinder.App
+import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
 import com.leaquan.petinder.ui.custom_view.TextViewPET
 
@@ -26,8 +26,8 @@ fun TextViewPET.gradientText() {
 
 
 fun TextView.setLoginText(clicks : ClickableSpan?){
-    val link = App.getString(R.string.login)
-    val textMess: String = App.getString(R.string.have_account_login)
+    val link = PETinderApplication.getString(R.string.login)
+    val textMess: String = PETinderApplication.getString(R.string.have_account_login)
     val spannableStringBuilder = SpannableStringBuilder(textMess)
     val startPrivacyIndex = textMess.indexOf(link)
 
@@ -42,7 +42,7 @@ fun TextView.setLoginText(clicks : ClickableSpan?){
     this.movementMethod = LinkMovementMethod.getInstance()
     this.setLinkTextColor(
         ContextCompat.getColor(
-            App.getInstance().applicationContext,
+            PETinderApplication.getInstance().applicationContext,
             R.color.colorAccent
         )
     )

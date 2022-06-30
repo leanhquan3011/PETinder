@@ -1,4 +1,4 @@
-package com.leaquan.petinder.util.view_model
+package com.leaquan.petinder.util.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

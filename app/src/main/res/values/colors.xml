@@ -21,4 +21,8 @@
     <color name="very_light_gray">#dfdfdf</color>
     <color name="red_5e">#EE4C5E</color>
 
+    <color name="chablis">#FFF6F6</color>
+    <color name="red_alpha_40">#66FF0000</color>
+    <color name="porcelain">#F1F4F6</color>
+    <color name="catskill_white">#E7EFF4</color>
 </resources>

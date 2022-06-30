@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
 import com.google.android.material.tabs.TabLayoutMediator
-import com.leaquan.petinder.App
+import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
 import com.leaquan.petinder.base.adapter.BasePagerAdapter
@@ -27,8 +27,8 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
     override fun inflateLayout(): Int = R.layout.activity_welcome
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        hideSystemUI()
         super.onCreate(savedInstanceState)
+        setDefaultStatusBarColor()
     }
 
     override fun setUp() {
@@ -55,7 +55,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
                             item = 2,
                             duration = LONG_ANIMATION
                         )
-                        btnAction.text = App.getString(R.string.lets_do_it)
+                        btnAction.text = PETinderApplication.getString(R.string.lets_do_it)
                     }
                     
                     ACTION -> { gotoLogin() }

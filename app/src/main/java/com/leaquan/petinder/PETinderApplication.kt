@@ -12,11 +12,11 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
 
 //when extends Application must declare in Manifest
-class App : Application(), KodeinAware {
+class PETinderApplication : Application(), KodeinAware {
 
     //bind to kodein instance in application class.
     override val kodein = Kodein.lazy {
-        import(androidXModule((this@App)))
+        import(androidXModule((this@PETinderApplication)))
         import(appModule)
     }
 
@@ -28,12 +28,12 @@ class App : Application(), KodeinAware {
     companion object {
         //this field are immediately made visible to other threads.
         @Volatile
-        private var instance: App? = null
+        private var instance: PETinderApplication? = null
 
         //static methods for functions
         @JvmStatic
-        fun getInstance(): App = instance ?: synchronized(this) {
-            instance ?: App().also {
+        fun getInstance(): PETinderApplication = instance ?: synchronized(this) {
+            instance ?: PETinderApplication().also {
                 instance = it
             }
         }

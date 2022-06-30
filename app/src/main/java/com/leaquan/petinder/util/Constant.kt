@@ -14,5 +14,8 @@ class Constant {
         const val IN_PREVIEW = 0
         const val END_PREVIEW = 1
         const val ACTION = 2
+
+        //phone
+        const val PHONE_NUMBER = "PHONE_NUMBER"
     }
 }

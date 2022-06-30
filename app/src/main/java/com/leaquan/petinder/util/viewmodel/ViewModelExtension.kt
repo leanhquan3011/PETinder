@@ -1,4 +1,4 @@
-package com.leaquan.petinder.util.view_model
+package com.leaquan.petinder.util.viewmodel
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.direct
-import org.kodein.di.generic
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
 

@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.leaquan.petinder">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".PETinderApplication"
         android:allowBackup="true"
-        android:name=".App"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_app_background"
@@ -14,15 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PETinder"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.check_in.CheckInActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".ui.welcome.WelcomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
@@ -32,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

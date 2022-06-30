@@ -12,7 +12,7 @@ import com.leaquan.petinder.util.type.Toast.Type
 import com.leaquan.petinder.util.extension.onClick
 import com.leaquan.petinder.util.text.setLoginText
 import com.leaquan.petinder.util.view_extension.transformation
-import com.leaquan.petinder.util.view_model.kodeinViewModel
+import com.leaquan.petinder.util.viewmodel.kodeinViewModel
 
 class RegisterFragment : BaseFragmentMVVM<FragmentRegisterBinding, RegisterViewModel>() {
 
