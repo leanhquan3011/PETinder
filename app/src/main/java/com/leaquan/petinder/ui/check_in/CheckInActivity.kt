@@ -14,17 +14,24 @@ class CheckInActivity : BaseActivity<ActivityCheckinBinding>() {
     override fun inflateLayout(): Int = R.layout.activity_checkin
 
     override fun setUp() {
-        setDefaultStatusBarColor()
+        //status bar primary color
+        statusBarColor()
+
         pushFragment(
             LoginFragment.instance(
                 this.packageName.toString()
             )
         )
+
+        with(binding) {
+            root.getTransition(R.id.motion_transit).isEnabled = false
+        }
     }
 
     override fun setUpObserver() = Unit
 
     override fun onBackPressed() {
         super.onBackPressed()
+        onFragmentBackPressed()
     }
 }

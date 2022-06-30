@@ -22,8 +22,8 @@ inline fun <reified T : FragmentActivity> T?.pushFragment
 
 //todo research this
 fun AppCompatActivity.onFragmentBackPressed(){
-    if (supportFragmentManager.backStackEntryCount <= 1)
-        this.finish()
-    else
+    if (supportFragmentManager.backStackEntryCount > 1)
         supportFragmentManager.popBackStack()
+    else
+        this.finish()
 }

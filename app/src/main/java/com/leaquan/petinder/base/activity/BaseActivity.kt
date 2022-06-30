@@ -86,7 +86,7 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
     }
 
     //custom status bar -> primary color
-    open fun setDefaultStatusBarColor(){
+    open fun statusBarColor(){
         window.also {
             it.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             it.statusBarColor = getColor(R.color.colorPrimaryDark)

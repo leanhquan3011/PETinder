@@ -26,12 +26,9 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
 
     override fun inflateLayout(): Int = R.layout.activity_welcome
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setDefaultStatusBarColor()
-    }
-
     override fun setUp() {
+        //status bar primary color
+        statusBarColor()
         setUpAnimSharedElement()
         setUpViewPager()
         setUpAnimViewPager()
@@ -106,13 +103,12 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
                     Item3()
                 )
             )
-
+            isUserInputEnabled = false
             TabLayoutMediator(binding.tabIndicator, this) {
                 tab, _ ->
                 tab.view.isEnabled = false
             }.attach()
 
-            beginFakeDrag()
         }
     }
 }

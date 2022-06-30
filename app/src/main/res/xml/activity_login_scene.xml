@@ -4,6 +4,7 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
     <!-- TODO: Clear this -->
    <Transition
+       android:id="@+id/motion_transit"
        motion:autoTransition="animateToEnd"
        motion:constraintSetEnd="@+id/end"
        motion:constraintSetStart="@id/start"
