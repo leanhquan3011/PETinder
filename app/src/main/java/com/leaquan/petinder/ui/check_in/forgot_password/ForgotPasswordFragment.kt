@@ -62,7 +62,7 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
     }
 
     // Callback function for Phone Auth
-    private var callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+    var callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         // This method is called when the verification is completed
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {

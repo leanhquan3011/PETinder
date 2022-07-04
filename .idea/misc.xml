@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/drawable/background_primary_gradient_vectical.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/background_primary_gradient_vertical.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/background_radius18_gray.xml" value="0.1865" />
+        <entry key="app/src/main/res/drawable/bg_button_gradient.xml" value="0.1465" />
+        <entry key="app/src/main/res/drawable/bg_gradient_vertical.xml" value="0.1465" />
         <entry key="app/src/main/res/drawable/bg_otp.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/bg_otp_error.xml" value="0.224" />
         <entry key="app/src/main/res/drawable/bg_otp_filled.xml" value="0.224" />

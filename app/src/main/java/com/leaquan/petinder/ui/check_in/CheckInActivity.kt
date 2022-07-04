@@ -31,7 +31,6 @@ class CheckInActivity : BaseActivity<ActivityCheckinBinding>() {
     override fun setUpObserver() = Unit
 
     override fun onBackPressed() {
-        super.onBackPressed()
         onFragmentBackPressed()
     }
 }
