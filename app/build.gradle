@@ -76,5 +76,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'androidx.browser:browser:1.4.0'
 
+    //facebook sdk - (deprecated - unused)
+    implementation 'com.facebook.android:facebook-login:latest.release'
+
+
 
 }

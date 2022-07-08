@@ -6,6 +6,10 @@
     <!--Common-->
     <string name="next">Next</string>
 
+    <!--Facebook API-->
+    <string name="facebook_app_id">565591531735119</string>
+    <string name="facebook_client_token">720df538d509fb3022266f15af2ebff6</string>
+
     <!--Welcome-->
     <string name="lets_do_it">Let\'s Do It</string>
     <string name="description_title1">Find Patners\nAnytime, Anywhere</string>
@@ -32,6 +36,4 @@
     <string name="phone_number">Phone number</string>
     <string name="error_message">lỗi rồi nha mạy</string>
     <string name="send_opt_code">Send OPT Code</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
