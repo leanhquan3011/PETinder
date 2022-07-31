@@ -26,7 +26,6 @@ import com.leaquan.petinder.util.pushFragment
 import com.leaquan.petinder.util.text.gradientText
 import com.leaquan.petinder.util.view_extension.transformation
 import com.leaquan.petinder.util.viewmodel.kodeinViewModel
-import java.util.*
 
 
 class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
