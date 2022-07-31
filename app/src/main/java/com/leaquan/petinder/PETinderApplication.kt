@@ -12,6 +12,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
 
 /**
+ * SET UP BRANCH GIT COMP
  * SET UP GIT BRANCH HOME
  **/
 
