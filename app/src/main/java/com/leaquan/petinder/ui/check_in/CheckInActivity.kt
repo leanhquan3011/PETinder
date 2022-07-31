@@ -1,7 +1,5 @@
 package com.leaquan.petinder.ui.check_in
 
-import android.graphics.Color
-import android.os.Bundle
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
 import com.leaquan.petinder.databinding.ActivityCheckinBinding
