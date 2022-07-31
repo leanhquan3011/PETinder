@@ -13,6 +13,7 @@ import org.kodein.di.android.x.androidXModule
 
 /**
  * SET UP BRANCH GIT COMP
+ * SET UP GIT BRANCH HOME
  **/
 
 //when extends Application must declare in Manifest
