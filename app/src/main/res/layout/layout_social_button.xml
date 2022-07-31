@@ -41,17 +41,32 @@
         android:id="@+id/btn_facebook"
         android:src="@drawable/ic_facebook"
         android:layout_marginStart="@dimen/_26dp"
+        android:scaleType="centerInside"
+        android:padding="@dimen/_12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_google"
         app:layout_constraintTop_toTopOf="@+id/btn_google"
         app:layout_constraintBottom_toBottomOf="@id/btn_google"
         style="@style/ImageView.ImageButton"/>
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_facebook"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintTop_toTopOf="@id/btn_facebook"
+        app:layout_constraintBottom_toBottomOf="@id/btn_facebook"
+        app:layout_constraintStart_toStartOf="@id/btn_facebook"
+        app:layout_constraintEnd_toEndOf="@id/btn_facebook"
+        android:visibility="invisible"/>
+
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btn_google"
         style="@style/ImageView.ImageButton"
         android:layout_marginTop="@dimen/_30dp"
         android:src="@drawable/ic_google"
+        android:scaleType="centerInside"
+        android:padding="@dimen/_12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_phone"
         app:layout_constraintStart_toEndOf="@id/btn_facebook"
@@ -63,6 +78,8 @@
         app:layout_constraintTop_toTopOf="@id/btn_google"
         android:layout_marginEnd="@dimen/_26dp"
         android:src="@drawable/ic_phone"
+        android:scaleType="centerInside"
+        android:padding="@dimen/_12dp"
         app:layout_constraintBottom_toBottomOf="@id/btn_google"
         app:layout_constraintStart_toEndOf="@id/btn_google"
         app:layout_constraintEnd_toEndOf="parent"

@@ -2,7 +2,6 @@ package com.leaquan.petinder.util
 
 class Constant {
     companion object {
-
         //animation
         const val DEFAULT_ANIMATION  = 0
         const val SHORT_ANIMATION : Long = 200
@@ -15,6 +14,17 @@ class Constant {
         const val END_PREVIEW = 1
         const val ACTION = 2
 
+    }
+}
+
+class Social {
+    companion object {
+        val facebook_permissions = mutableListOf("email", "public_profile")
+    }
+}
+
+class BundleKey {
+    companion object {
         //phone
         const val PHONE_NUMBER = "PHONE_NUMBER"
     }

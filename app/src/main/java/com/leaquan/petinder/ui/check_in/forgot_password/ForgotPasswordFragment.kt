@@ -66,8 +66,8 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
 
         // This method is called when the verification is completed
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-            startActivity(Intent(activity, HomeActivity::class.java))
-            activity?.finish()
+//            startActivity(Intent(activity, HomeActivity::class.java))
+//            activity?.finish()
             Log.d("GFG" , "onVerificationCompleted Success")
         }
 

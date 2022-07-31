@@ -14,7 +14,7 @@ import com.leaquan.petinder.databinding.FragmentVerificationBinding
 import com.leaquan.petinder.ui.check_in.login.LoginFragment
 import com.leaquan.petinder.ui.home.HomeActivity
 import com.leaquan.petinder.ui.splash.SplashActivity
-import com.leaquan.petinder.util.Constant.Companion.PHONE_NUMBER
+import com.leaquan.petinder.util.BundleKey.Companion.PHONE_NUMBER
 import com.leaquan.petinder.util.extension.WTF
 import com.leaquan.petinder.util.extension.onClick
 import com.leaquan.petinder.util.type.Toast
@@ -47,7 +47,7 @@ class VerificationFragment: BaseFragmentMVVM<FragmentVerificationBinding, Verifi
         with(binding) {
             btnSend.onClick {
                 val otp = otpView.getStringFromFields().trim()
-                WTF(otp)
+
                 if(otp.isNotEmpty()){
                     val credential : PhoneAuthCredential = PhoneAuthProvider.getCredential(phone.toString(), otp)
                     signInWithPhoneAuthCredential(credential)
