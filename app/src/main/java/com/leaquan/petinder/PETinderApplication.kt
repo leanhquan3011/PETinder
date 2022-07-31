@@ -11,6 +11,10 @@ import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
 
+/**
+ * SET UP GIT BRANCH HOME
+ **/
+
 //when extends Application must declare in Manifest
 class PETinderApplication : Application(), KodeinAware {
 
