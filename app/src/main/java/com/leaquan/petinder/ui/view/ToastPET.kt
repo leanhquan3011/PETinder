@@ -1,9 +1,8 @@
-package com.leaquan.petinder.ui.custom_view
+package com.leaquan.petinder.ui.view
 
 import android.content.Context
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.leaquan.petinder.R
@@ -25,11 +24,11 @@ open class ToastPET(context: Context?) : Toast(context) {
 
         when (t.type.type) {
             "SUCCESS" -> {
-                binding.toastIcon.setImageResource(R.drawable.ic_tick_green_white)
+                binding.toastIcon.setImageResource(R.drawable.ic_tick_green_round_white)
                 binding.toastType.setBackgroundResource(R.drawable.toast_success_shape)
             }
             "WARNING" -> {
-                binding.toastIcon.setImageResource(R.drawable.ic_warning_transparent)
+                binding.toastIcon.setImageResource(R.drawable.ic_warning_round_transparent)
                 binding.toastType.setBackgroundResource(R.drawable.toast_warning_shape)
             }
             "ERROR" -> {

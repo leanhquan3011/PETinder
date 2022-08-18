@@ -1,12 +1,14 @@
 package com.leaquan.petinder.ui.check_in.country_dialog.model
 
 class Countries {
-    val COUNTRIES: ArrayList<Country> = ArrayList()
-        get() = field
 
-    fun getCountries(code: String) : Country?  {
-        val countries = COUNTRIES.filter {
-            it.getCode() == code.uppercase()
+    private val _countries: ArrayList<Country> = ArrayList()
+    val countries get() = _countries
+
+    fun getCountry(code: String) : Country?  {
+
+        val countries = _countries.filter {
+            it.code == code.uppercase()
         }
         if (countries.isNotEmpty()){
             return countries[0]
@@ -15,21 +17,21 @@ class Countries {
     }
 
     init {
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "vn",
                 "Vietnam (Việt Nam)",
                 84
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kr",
                 "South Korea (대한민국)",
                 82
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cn",
                 "China (中国)",
@@ -37,28 +39,28 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "in",
                 "India (भारत)",
                 91
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "id",
                 "Indonesia",
                 62
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pk",
                 "Pakistan (‫پاکستان‬‎)",
                 92
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "th",
                 "Thailand (ไทย)",
@@ -66,301 +68,301 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "af",
                 "Afghanistan (‫افغانستان‬‎)",
                 93
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "al",
                 "Albania (Shqipëri)",
                 355
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "dz",
                 "Algeria (‫الجزائر‬‎)",
                 213
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "as",
                 "American Samoa",
                 1684
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ad",
                 "Andorra",
                 376
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ao",
                 "Angola",
                 244
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ai",
                 "Anguilla",
                 1264
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ag",
                 "Antigua and Barbuda",
                 1268
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ar",
                 "Argentina",
                 54
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "am",
                 "Armenia (Հայաստան)",
                 374
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "aw",
                 "Aruba",
                 297
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "au",
                 "Australia",
                 61
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "at",
                 "Austria (Österreich)",
                 43
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "az",
                 "Azerbaijan (Azərbaycan)",
                 994
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bs",
                 "Bahamas",
                 1242
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bh",
                 "Bahrain (‫البحرين‬‎)",
                 973
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bd",
                 "Bangladesh (বাংলাদেশ)",
                 880
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bb",
                 "Barbados",
                 1246
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "by",
                 "Belarus (Беларусь)",
                 375
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "be",
                 "Belgium (België)",
                 32
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bz",
                 "Belize",
                 501
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bj",
                 "Benin (Bénin)",
                 229
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bm",
                 "Bermuda",
                 1441
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bt",
                 "Bhutan (འབྲུག)",
                 975
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bo",
                 "Bolivia",
                 591
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ba",
                 "Bosnia and Herzegovina (Босна и Херцеговина)",
                 387
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bw",
                 "Botswana",
                 267
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "br",
                 "Brazil (Brasil)",
                 55
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "io",
                 "British Indian Ocean Territory",
                 246
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "vg",
                 "British Virgin Islands",
                 1284
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bn",
                 "Brunei",
                 673
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bg",
                 "Bulgaria (България)",
                 359
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bf",
                 "Burkina Faso",
                 226
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bi",
                 "Burundi (Uburundi)",
                 257
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kh",
                 "Cambodia (កម្ពុជា)",
                 855
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cm",
                 "Cameroon (Cameroun)",
                 237
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ca",
                 "Canada",
                 1
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cv",
                 "Cape Verde (Kabu Verdi)",
                 238
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bq",
                 "Caribbean Netherlands",
                 599
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ky",
                 "Cayman Islands",
                 1345
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cf",
                 "Central African Republic (République centrafricaine)",
                 236
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "td",
                 "Chad (Tchad)",
                 235
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cl",
                 "Chile",
@@ -368,371 +370,371 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cx",
                 "Christmas Island",
                 61
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cc",
                 "Cocos (Keeling) Islands",
                 61
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "co",
                 "Colombia",
                 57
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "km",
                 "Comoros (‫جزر القمر‬‎)",
                 269
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cd",
                 "Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)",
                 243
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cg",
                 "Congo (Republic) (Congo-Brazzaville)",
                 242
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ck",
                 "Cook Islands",
                 682
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cr",
                 "Costa Rica",
                 506
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ci",
                 "Côte d’Ivoire",
                 225
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "hr",
                 "Croatia (Hrvatska)",
                 385
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cu",
                 "Cuba",
                 53
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cw",
                 "Curaçao",
                 599
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cy",
                 "Cyprus (Κύπρος)",
                 357
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "cz",
                 "Czech Republic (Česká republika)",
                 420
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "dk",
                 "Denmark (Danmark)",
                 45
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "dj",
                 "Djibouti",
                 253
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "dm",
                 "Dominica",
                 1767
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "dom",
                 "Dominican Republic (República Dominicana)",
                 1
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ec",
                 "Ecuador",
                 593
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "eg",
                 "Egypt (‫مصر‬‎)",
                 20
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sv",
                 "El Salvador",
                 503
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gq",
                 "Equatorial Guinea (Guinea Ecuatorial)",
                 240
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "er",
                 "Eritrea",
                 291
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ee",
                 "Estonia (Eesti)",
                 372
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "et",
                 "Ethiopia",
                 251
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fk",
                 "Falkland Islands (Islas Malvinas)",
                 500
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fo",
                 "Faroe Islands (Føroyar)",
                 298
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fj",
                 "Fiji",
                 679
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fi",
                 "Finland (Suomi)",
                 358
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fr",
                 "France",
                 33
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gf",
                 "French Guiana (Guyane française)",
                 594
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pf",
                 "French Polynesia (Polynésie française)",
                 689
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ga",
                 "Gabon",
                 241
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gm",
                 "Gambia",
                 220
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ge",
                 "Georgia (საქართველო)",
                 995
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "de",
                 "Germany (Deutschland)",
                 49
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gh",
                 "Ghana (Gaana)",
                 233
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gi",
                 "Gibraltar",
                 350
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gr",
                 "Greece (Ελλάδα)",
                 30
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gl",
                 "Greenland (Kalaallit Nunaat)",
                 299
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gd",
                 "Grenada",
                 1473
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gp",
                 "Guadeloupe",
                 590
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gu",
                 "Guam",
                 1671
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gt",
                 "Guatemala",
                 502
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gg",
                 "Guernsey",
                 44
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gn",
                 "Guinea (Guinée)",
                 224
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gw",
                 "Guinea-Bissau (Guiné Bissau)",
                 245
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gy",
                 "Guyana",
                 592
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ht",
                 "Haiti",
                 509
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "hn",
                 "Honduras",
                 504
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "hk",
                 "Hong Kong (香港)",
                 852
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "hu",
                 "Hungary (Magyarország)",
                 36
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "is",
                 "Iceland (Ísland)",
@@ -740,434 +742,434 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ir",
                 "Iran (‫ایران‬‎)",
                 98
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "iq",
                 "Iraq (‫العراق‬‎)",
                 964
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ie",
                 "Ireland",
                 353
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "im",
                 "Isle of Man",
                 44
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "il",
                 "Israel (‫ישראל‬‎)",
                 972
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "it",
                 "Italy (Italia)",
                 39
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "jm",
                 "Jamaica",
                 1876
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "jp",
                 "Japan (日本)",
                 81
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "je",
                 "Jersey",
                 44
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "jo",
                 "Jordan (‫الأردن‬‎)",
                 962
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kz",
                 "Kazakhstan (Казахстан)",
                 7
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ke",
                 "Kenya",
                 254
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ki",
                 "Kiribati",
                 686
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kw",
                 "Kuwait (‫الكويت‬‎)",
                 965
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kg",
                 "Kyrgyzstan (Кыргызстан)",
                 996
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "la",
                 "Laos (ລາວ)",
                 856
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lv",
                 "Latvia (Latvija)",
                 371
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lb",
                 "Lebanon (‫لبنان‬‎)",
                 961
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ls",
                 "Lesotho",
                 266
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lr",
                 "Liberia",
                 231
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ly",
                 "Libya (‫ليبيا‬‎)",
                 218
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "li",
                 "Liechtenstein",
                 423
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lt",
                 "Lithuania (Lietuva)",
                 370
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lu",
                 "Luxembourg",
                 352
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mo",
                 "Macau (澳門)",
                 853
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mk",
                 "Macedonia (FYROM) (Македонија)",
                 389
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mg",
                 "Madagascar (Madagasikara)",
                 261
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mw",
                 "Malawi",
                 265
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "my",
                 "Malaysia",
                 60
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mv",
                 "Maldives",
                 960
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ml",
                 "Mali",
                 223
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mt",
                 "Malta",
                 356
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mh",
                 "Marshall Islands",
                 692
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mq",
                 "Martinique",
                 596
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mr",
                 "Mauritania (‫موريتانيا‬‎)",
                 222
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mu",
                 "Mauritius (Moris)",
                 230
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "yt",
                 "Mayotte",
                 262
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mx",
                 "Mexico (México)",
                 52
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "fm",
                 "Micronesia",
                 691
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "md",
                 "Moldova (Republica Moldova)",
                 373
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mc",
                 "Monaco",
                 377
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mn",
                 "Mongolia (Монгол)",
                 976
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "me",
                 "Montenegro (Crna Gora)",
                 382
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ms",
                 "Montserrat",
                 1664
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ma",
                 "Morocco (‫المغرب‬‎)",
                 212
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mz",
                 "Mozambique (Moçambique)",
                 258
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mm",
                 "Myanmar (Burma) (မြန်မာ)",
                 95
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "na",
                 "Namibia (Namibië)",
                 264
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nr",
                 "Nauru",
                 674
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "np",
                 "Nepal (नेपाल)",
                 977
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nl",
                 "Netherlands (Nederland)",
                 31
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nc",
                 "New Caledonia (Nouvelle-Calédonie)",
                 687
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nz",
                 "New Zealand",
                 64
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ni",
                 "Nicaragua",
                 505
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ne",
                 "Niger (Nijar)",
                 227
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ng",
                 "Nigeria",
                 234
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nu",
                 "Niue",
                 683
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "nf",
                 "Norfolk Island",
                 672
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kp",
                 "North Korea (조선 민주주의 인민 공화국)",
                 850
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mp",
                 "Northern Mariana Islands",
                 1670
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "no",
                 "Norway (Norge)",
                 47
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "om",
                 "Oman (‫عُمان‬‎)",
@@ -1175,259 +1177,259 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pw",
                 "Palau",
                 680
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ps",
                 "Palestine (‫فلسطين‬‎)",
                 970
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pa",
                 "Panama (Panamá)",
                 507
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pg",
                 "Papua New Guinea",
                 675
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "py",
                 "Paraguay",
                 595
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pe",
                 "Peru (Perú)",
                 51
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ph",
                 "Philippines",
                 63
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pl",
                 "Poland (Polska)",
                 48
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pt",
                 "Portugal",
                 351
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pr",
                 "Puerto Rico",
                 1
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "qa",
                 "Qatar (‫قطر‬‎)",
                 974
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "re",
                 "Réunion (La Réunion)",
                 262
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ro",
                 "Romania (România)",
                 40
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ru",
                 "Russia (Россия)",
                 7
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "rw",
                 "Rwanda",
                 250
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "bl",
                 "Saint Barthélemy (Saint-Barthélemy)",
                 590
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sh",
                 "Saint Helena",
                 290
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "kn",
                 "Saint Kitts and Nevis",
                 1869
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lc",
                 "Saint Lucia",
                 1758
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "mf",
                 "Saint Martin (Saint-Martin (partie française))",
                 590
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "pm",
                 "Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)",
                 508
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "vc",
                 "Saint Vincent and the Grenadines",
                 1784
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ws",
                 "Samoa",
                 685
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sm",
                 "San Marino",
                 378
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "st",
                 "São Tomé and Príncipe (São Tomé e Príncipe)",
                 239
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sa",
                 "Saudi Arabia (‫المملكة العربية السعودية‬‎)",
                 966
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sn",
                 "Senegal (Sénégal)",
                 221
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "rs",
                 "Serbia (Србија)",
                 381
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sc",
                 "Seychelles",
                 248
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sl",
                 "Sierra Leone",
                 232
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sg",
                 "Singapore",
                 65
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sx",
                 "Sint Maarten",
                 1721
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sk",
                 "Slovakia (Slovensko)",
                 421
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "si",
                 "Slovenia (Slovenija)",
                 386
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sb",
                 "Solomon Islands",
                 677
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "so",
                 "Somalia (Soomaaliya)",
                 252
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "za",
                 "South Africa",
@@ -1435,238 +1437,238 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ss",
                 "South Sudan (‫جنوب السودان‬‎)",
                 211
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "es",
                 "Spain (España)",
                 34
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "lk",
                 "Sri Lanka (ශ්‍රී ලංකාව)",
                 94
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sd",
                 "Sudan (‫السودان‬‎)",
                 249
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sr",
                 "Suriname",
                 597
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sj",
                 "Svalbard and Jan Mayen",
                 47
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sz",
                 "Swaziland",
                 268
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "se",
                 "Sweden (Sverige)",
                 46
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ch",
                 "Switzerland (Schweiz)",
                 41
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "sy",
                 "Syria (‫سوريا‬‎)",
                 963
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tw",
                 "Taiwan (台灣)",
                 886
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tj",
                 "Tajikistan",
                 992
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tz",
                 "Tanzania",
                 255
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tl",
                 "Timor-Leste",
                 670
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tg",
                 "Togo",
                 228
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tk",
                 "Tokelau",
                 690
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "to",
                 "Tonga",
                 676
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tt",
                 "Trinidad and Tobago",
                 1868
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tn",
                 "Tunisia (‫تونس‬‎)",
                 216
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tr",
                 "Turkey (Türkiye)",
                 90
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tm",
                 "Turkmenistan",
                 993
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tc",
                 "Turks and Caicos Islands",
                 1649
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "tv",
                 "Tuvalu",
                 688
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "vi",
                 "U.S. Virgin Islands",
                 1340
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ug",
                 "Uganda",
                 256
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ua",
                 "Ukraine (Україна)",
                 380
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ae",
                 "United Arab Emirates (‫الإمارات العربية المتحدة‬‎)",
                 971
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "gb",
                 "United Kingdom",
                 44
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "us",
                 "United States",
                 1
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "uy",
                 "Uruguay",
                 598
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "uz",
                 "Uzbekistan (Oʻzbekiston)",
                 998
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "vu",
                 "Vanuatu",
                 678
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "va",
                 "Vatican City (Città del Vaticano)",
                 39
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ve",
                 "Venezuela",
@@ -1674,42 +1676,42 @@ class Countries {
             )
         )
 
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "wf",
                 "Wallis and Futuna",
                 681
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "eh",
                 "Western Sahara (‫الصحراء الغربية‬‎)",
                 212
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ye",
                 "Yemen (‫اليمن‬‎)",
                 967
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "zm",
                 "Zambia",
                 260
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "zw",
                 "Zimbabwe",
                 263
             )
         )
-        COUNTRIES.add(
+        _countries.add(
             Country(
                 "ax",
                 "Åland Islands",

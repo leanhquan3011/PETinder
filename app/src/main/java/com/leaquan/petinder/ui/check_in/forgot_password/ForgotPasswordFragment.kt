@@ -1,25 +1,19 @@
 package com.leaquan.petinder.ui.check_in.forgot_password
 
-import android.content.Intent
 import android.util.Log
 import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentActivity
 import com.google.firebase.FirebaseException
-import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.fragment.BaseFragmentMVVM
 import com.leaquan.petinder.databinding.FragmentForgotPasswordBinding
+import com.leaquan.petinder.ui.check_in.country_dialog.CountryListDialog
 import com.leaquan.petinder.ui.check_in.login.LoginFragment.Companion.FROM
 import com.leaquan.petinder.ui.check_in.verification.VerificationFragment
-import com.leaquan.petinder.ui.home.HomeActivity
-import com.leaquan.petinder.ui.splash.SplashActivity
-import com.leaquan.petinder.util.extension.WTF
 import com.leaquan.petinder.util.extension.onClick
 import com.leaquan.petinder.util.pushFragment
 import com.leaquan.petinder.util.type.Toast
 import com.leaquan.petinder.util.viewmodel.kodeinViewModel
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, ForgotPasswordViewModel>() {
@@ -55,6 +49,13 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
             btnSend.onClick {
                 login()
             }
+
+            layoutCountry.onClick {
+                showShortToast("cc", Toast.Type.WARNING)
+                val dialog = CountryListDialog()
+                dialog.show(childFragmentManager, CountryListDialog.TAG)
+            }
+
         }
     }
 

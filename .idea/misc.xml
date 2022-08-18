@@ -4,6 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/bg_bottom_sheet.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/bg_edittext.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/bg_edittext_black.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/bg_otp.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_check.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_close.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_close_round_gray.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_search.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_show_password.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_tick_green_round_white.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_tick_green_white.xml" value="0.1905" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_warning_cyprus.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/ic_warning_transparent.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/item_default_dot.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/item_selected_dot.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/toast_error_shape.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/toast_success_shape.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/drawable/toast_warning_shape.xml" value="0.2205" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/activity_checkin.xml" value="0.18802083333333333" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/activity_welcome.xml" value="0.18802083333333333" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/fragment_country_list_dialog.xml" value="0.36102564102564105" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/fragment_forgot_password.xml" value="0.36666666666666664" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/fragment_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/item_alphabet.xml" value="0.365625" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/item_national.xml" value="0.25" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/item_national_code.xml" value="0.36666666666666664" />
+        <entry key="..\:/mobile-project/PETinder/app/src/main/res/layout/layout_toast.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/background_button_gradient.xml" value="0.187" />
         <entry key="app/src/main/res/drawable/background_button_gradient_border.xml" value="0.187" />

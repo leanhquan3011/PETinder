@@ -11,7 +11,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.leaquan.petinder.base.view.BaseView
-import com.leaquan.petinder.ui.custom_view.ToastPET
+import com.leaquan.petinder.ui.view.ToastPET
 import com.leaquan.petinder.util.type.Toast
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware

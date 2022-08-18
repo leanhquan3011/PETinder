@@ -16,12 +16,11 @@ import androidx.databinding.ViewDataBinding
 import com.google.android.material.snackbar.Snackbar
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.view.BaseView
-import com.leaquan.petinder.ui.custom_view.ToastPET
+import com.leaquan.petinder.ui.view.ToastPET
 import com.leaquan.petinder.util.Constant
 import com.leaquan.petinder.util.type.Toast.Type
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
-import android.view.WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN as FLAG_FORCE_NOT_FULLSCREEN
 import com.leaquan.petinder.util.type.Toast.Duration.SHORT
 import com.leaquan.petinder.util.type.Toast.Duration.LONG
 

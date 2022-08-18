@@ -25,7 +25,9 @@ class Social {
 
 class BundleKey {
     companion object {
-        //phone
+        //check in
         const val PHONE_NUMBER = "PHONE_NUMBER"
+        const val BOTTOM_SHEET_HEIGHT_VALUE = "BOTTOM_SHEET_HEIGHT_VALUE"
+        const val COUNTRY_SELECTED = "COUNTRY_SELECTED"
     }
 }

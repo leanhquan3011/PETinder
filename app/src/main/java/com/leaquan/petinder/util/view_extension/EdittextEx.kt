@@ -6,7 +6,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.widget.AppCompatImageView
 import com.leaquan.petinder.R
-import com.leaquan.petinder.ui.custom_view.EdittextPET
+import com.leaquan.petinder.ui.view.EdittextPET
 
 fun EdittextPET.transformation(imageView : AppCompatImageView) {
     val anim : Animation = AnimationUtils.loadAnimation(this.context, R.anim.rotate_fade)

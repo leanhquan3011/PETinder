@@ -1,4 +1,4 @@
-package com.leaquan.petinder.ui.custom_view
+package com.leaquan.petinder.ui.view
 
 import android.content.Context
 import android.content.res.TypedArray

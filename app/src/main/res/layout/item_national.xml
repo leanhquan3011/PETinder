@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="country"
+            type="com.leaquan.petinder.ui.check_in.country_dialog.model.Country" />
+    </data>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_national_flag"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <com.leaquan.petinder.ui.view.TextViewPET
+            android:id="@+id/tv_dia_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:text="@{country.code}"
+            app:layout_constraintTop_toTopOf="@id/iv_national_flag"
+            app:layout_constraintBottom_toBottomOf="@id/iv_national_flag"
+            app:layout_constraintStart_toEndOf="@id/iv_national_flag"
+            style="@style/TextViewPET.Bold"
+            tools:text="(+84)"/>
+        
+        <com.leaquan.petinder.ui.view.TextViewPET
+            android:id="@+id/tv_national_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:text="@{country.displayName}"
+            app:layout_constraintTop_toTopOf="@id/tv_dia_code"
+            app:layout_constraintBottom_toBottomOf="@id/tv_dia_code"
+            app:layout_constraintStart_toEndOf="@id/tv_dia_code"
+            style="@style/TextViewPET.Bold"
+            tools:text="VietNam (Việt Nam)"/>
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tick"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@id/tv_national_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_national_name"
+            app:layout_constraintStart_toEndOf="@id/tv_national_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

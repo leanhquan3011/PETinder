@@ -19,9 +19,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.leaquan.petinder.ui.custom_view.TextViewPET
+            <com.leaquan.petinder.ui.view.TextViewPET
                 android:id="@+id/tv_title"
-                style="@style/TextViewPET.SubTitle"
+                style="@style/TextViewPET.SubTitle.White"
                 android:text="@string/app_title"
                 android:textSize="@dimen/_24sp"
                 app:layout_constraintBottom_toBottomOf="parent"

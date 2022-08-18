@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tv_login_with"/>
 
-    <com.leaquan.petinder.ui.custom_view.TextViewPET
+    <com.leaquan.petinder.ui.view.TextViewPET
         android:id="@+id/tv_login_with"
         android:text="@string/login_with"
         android:textColor="@color/text_grey"

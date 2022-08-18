@@ -1,6 +1,7 @@
 package com.leaquan.petinder.ui.check_in.country_dialog.model
 
 import android.content.Context
+import java.io.Serializable
 import java.util.*
 
 data class Country (
@@ -8,22 +9,11 @@ data class Country (
         var mName: String? = null,
         var mDialCode : Int = 0,
         var isSelected : Boolean = false
-) {
-        fun getCode(): String? {
-                return mCode?.uppercase(Locale.ROOT)
-        }
+) : Serializable {
 
-        fun getName(): String? {
-                return mName
-        }
+        val code get() = mCode?.uppercase(Locale.ROOT)
 
-        fun getDialCode(): Int {
-                return mDialCode
-        }
-
-        fun getDisplayName(): String? {
-                return mCode?.let { Locale("", it).getDisplayCountry(Locale.US) }
-        }
+        val displayName get() = mCode?.let { Locale("", it).getDisplayCountry(Locale.US) }
 
         fun getResId(context: Context): Int {
                 val name = String.format("%s", mCode!!.lowercase(Locale.ROOT))
