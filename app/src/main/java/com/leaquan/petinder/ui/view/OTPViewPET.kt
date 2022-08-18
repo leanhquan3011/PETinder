@@ -1,4 +1,4 @@
-package com.leaquan.petinder.ui.custom_view
+package com.leaquan.petinder.ui.view
 
 import android.content.Context
 import android.content.res.Resources
@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
-import android.os.Build
 import android.text.method.PasswordTransformationMethod
 import android.util.AttributeSet
 import android.util.TypedValue

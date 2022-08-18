@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
-import com.leaquan.petinder.ui.custom_view.TextViewPET
+import com.leaquan.petinder.ui.view.TextViewPET
 
 fun TextViewPET.gradientText() {
     val paint = this.paint

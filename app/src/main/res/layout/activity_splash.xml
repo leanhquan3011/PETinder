@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <com.leaquan.petinder.ui.custom_view.TextViewPET
+            <com.leaquan.petinder.ui.view.TextViewPET
                 android:id="@+id/tv_title"
                 android:text="@string/app_title"
                 app:layout_constraintTop_toTopOf="parent"

@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.leaquan.petinder.ui.custom_view.TextViewPET
+        <com.leaquan.petinder.ui.view.TextViewPET
             android:id="@+id/tv_title"
             android:text="Verification"
             android:textSize="@dimen/_24sp"
@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/TextViewPET.SubTitle.Black"/>
 
-        <com.leaquan.petinder.ui.custom_view.TextViewPET
+        <com.leaquan.petinder.ui.view.TextViewPET
             android:id="@+id/tv_sub_title"
             style="@style/TextViewPET.SubTitle.Black"
             android:text="@string/otp_verification"
@@ -33,7 +33,7 @@
             app:layout_constraintVertical_bias="0.2"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <com.leaquan.petinder.ui.custom_view.TextViewPET
+        <com.leaquan.petinder.ui.view.TextViewPET
             android:id="@+id/tv_content"
             style="@style/TextViewPET"
             android:gravity="center"
@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_sub_title"/>
 
-        <com.leaquan.petinder.ui.custom_view.OTPViewPET
+        <com.leaquan.petinder.ui.view.OTPViewPET
             android:id="@+id/otp_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.leaquan.petinder.ui.custom_view.TextViewPET
+        <com.leaquan.petinder.ui.view.TextViewPET
             android:id="@+id/tv_resend_otp"
             android:text="Don't recuve the OTP? RESEND OTP"
             android:textColor="@color/gray_ccb5"
@@ -88,7 +88,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/TextViewPET"/>
 
-        <com.leaquan.petinder.ui.custom_view.ButtonPET
+        <com.leaquan.petinder.ui.view.ButtonPET
             android:id="@+id/btn_send"
             style="@style/ButtonPET.Gradient.Border"
             android:layout_marginVertical="@dimen/_30dp"

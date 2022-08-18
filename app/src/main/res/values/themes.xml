@@ -19,10 +19,8 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowIsTranslucent">true</item>
 
-        <!--Status bar not splash when open activity-->
-
-
     </style>
+    <!--=========================================================================================-->
 
     <!--TextView PET-->
     <style name="TextViewPET" parent="Widget.AppCompat.TextView">
@@ -37,7 +35,7 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="TextViewPET.SubTitle" parent="TextViewPET">
+    <style name="TextViewPET.SubTitle.White" parent="TextViewPET">
         <item name="fontType">title</item>
         <item name="android:textColor">@color/white</item>
     </style>
@@ -51,6 +49,11 @@
         <item name="fontType">normal</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <style name="TextViewPET.Bold" parent="TextViewPET">
+        <item name="fontType">bold</item>
+    </style>
+    <!--=========================================================================================-->
 
     <!--Button PET-->
     <style name="ButtonPET" parent="Widget.AppCompat.Button">
@@ -87,6 +90,7 @@
         <item name="android:textSize">@dimen/_18sp</item>
         <item name="android:textColor">@color/gray_ccb5</item>
     </style>
+    <!--=========================================================================================-->
 
     <!--Edittext PET-->
     <style name="EdittextPET" parent="Widget.AppCompat.EditText">
@@ -96,7 +100,7 @@
     </style>
 
     <style name="EdittextPET.Default" parent="EdittextPET">
-        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:background">@drawable/bg_edittext_gray</item>
         <item name="android:lineSpacingExtra">@dimen/_2sp</item>
         <item name="android:textColor">@color/text_black</item>
         <item name="android:paddingHorizontal">@dimen/_18dp</item>
@@ -106,6 +110,7 @@
         <item name="fontType">normal</item>
         <item name="maxLines">1</item>
     </style>
+    <!--=========================================================================================-->
 
     <!--ImageView-->
     <style name="ImageView.ImageButton" parent="Widget.AppCompat.ImageButton">
@@ -113,8 +118,22 @@
         <item name="android:layout_height">@dimen/_40dp</item>
         <item name="android:layout_marginHorizontal">@dimen/_12dp</item>
         <item name="android:paddingHorizontal">@dimen/_8dp</item>
-        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:background">@drawable/bg_edittext_gray</item>
     </style>
+    <!--=========================================================================================-->
+
+    <!--BottomSheet-->
+    <style name="BottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+    <!--=========================================================================================-->
 
 
 </resources>
