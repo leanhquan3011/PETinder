@@ -8,6 +8,7 @@ import com.leaquan.petinder.util.viewmodel.bindViewModel
 import org.kodein.di.Kodein
 import org.kodein.di.direct
 import org.kodein.di.generic.bind
+import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
 
@@ -17,7 +18,7 @@ val viewModelModule = Kodein.Module(VIEW_MODEL_MODULE, false) {
 
     bind<ViewModelProvider.Factory>() with singleton { ViewModelFactory(kodein.direct) }
 
-    bindViewModel<LoginViewModel>() with provider { LoginViewModel() }
+    bindViewModel<LoginViewModel>() with provider { LoginViewModel(instance()) }
 
     //bindViewModel<VerificationViewModel>() with provider { VerificationViewModel(instance()) }
 

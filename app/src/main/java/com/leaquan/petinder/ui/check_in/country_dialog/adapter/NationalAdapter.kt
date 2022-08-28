@@ -8,7 +8,7 @@ import com.leaquan.petinder.R
 import com.leaquan.petinder.databinding.ItemNationalBinding
 import com.leaquan.petinder.ui.check_in.country_dialog.model.Countries
 import com.leaquan.petinder.ui.check_in.country_dialog.model.Country
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
 
 class NationalAdapter(
     private val context : Context?,

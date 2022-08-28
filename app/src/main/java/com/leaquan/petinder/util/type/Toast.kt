@@ -8,7 +8,7 @@ class Toast {
         LONG(7000),
         SHORT(4000)
     }
-    enum class Type (val type : String) {
+    enum class Type (val value : String) {
         SUCCESS("SUCCESS"),
         ERROR("ERROR"),
         WARNING("WARNING");

@@ -6,6 +6,7 @@ import com.leaquan.petinder.databinding.ActivityCheckinBinding
 import com.leaquan.petinder.ui.check_in.login.LoginFragment
 import com.leaquan.petinder.util.onFragmentBackPressed
 import com.leaquan.petinder.util.pushFragment
+import com.leaquan.petinder.util.type.Toast
 
 class CheckInActivity : BaseActivity<ActivityCheckinBinding>() {
 
