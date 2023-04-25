@@ -44,24 +44,4 @@ abstract class BaseFragment <DB : ViewDataBinding> : Fragment(), BaseView, Kodei
         setUp()
         setUpObserver()
     }
-
-    fun showShortToast(message: String, type: Toast.Type) {
-        ToastPET(activity).makeText(
-            activity,
-            message,
-            type of Toast.Duration.SHORT
-        )?.show()
-    }
-
-    fun showLongToast(message: String, type: Toast.Type) {
-        ToastPET(activity).makeText(
-            activity,
-            message,
-            type of Toast.Duration.LONG
-        )?.show()
-    }
-
-    fun showSnackBar(message: String) {
-        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
-    }
 }

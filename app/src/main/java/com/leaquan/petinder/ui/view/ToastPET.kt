@@ -16,13 +16,13 @@ open class ToastPET(context: Context?) : Toast(context) {
     open fun makeText(
         context: Context?,
         message: String?,
-        t : ToastCus
+        type : ToastCus
     ): Toast? {
         val toast = Toast(context)
         binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.layout_toast, null, false)
         binding.toastText.text = message ?: ""
 
-        when (t.type.type) {
+        when (type.type.value) {
             "SUCCESS" -> {
                 binding.toastIcon.setImageResource(R.drawable.ic_tick_green_round_white)
                 binding.toastType.setBackgroundResource(R.drawable.toast_success_shape)
@@ -37,7 +37,7 @@ open class ToastPET(context: Context?) : Toast(context) {
             }
         }
 
-        this.duration = t.duration.duration
+        this.duration = type.duration.duration
 
         toast.apply {
             view = binding.root

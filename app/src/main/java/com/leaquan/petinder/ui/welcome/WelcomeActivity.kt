@@ -1,14 +1,13 @@
 package com.leaquan.petinder.ui.welcome
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
 import com.google.android.material.tabs.TabLayoutMediator
 import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
-import com.leaquan.petinder.base.adapter.BasePagerAdapter
+import com.leaquan.petinder.base.ViewPagerAdapter
 import com.leaquan.petinder.databinding.ActivityWelcomeBinding
 import com.leaquan.petinder.ui.check_in.CheckInActivity
 import com.leaquan.petinder.ui.welcome.fragments.Item1
@@ -18,7 +17,7 @@ import com.leaquan.petinder.util.Constant.Companion.ACTION
 import com.leaquan.petinder.util.Constant.Companion.END_PREVIEW
 import com.leaquan.petinder.util.Constant.Companion.IN_PREVIEW
 import com.leaquan.petinder.util.Constant.Companion.LONG_ANIMATION
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
 import com.leaquan.petinder.util.view_pager.currentItemWithAnimate
 
 
@@ -95,7 +94,7 @@ class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
 
     private fun setUpViewPager() {
         binding.pagerContent.apply {
-            adapter = BasePagerAdapter(
+            adapter = ViewPagerAdapter(
                 this@WelcomeActivity,
                 listOf(
                     Item1(),

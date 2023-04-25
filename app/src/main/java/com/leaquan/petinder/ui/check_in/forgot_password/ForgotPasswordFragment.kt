@@ -10,8 +10,9 @@ import com.leaquan.petinder.databinding.FragmentForgotPasswordBinding
 import com.leaquan.petinder.ui.check_in.country_dialog.CountryListDialog
 import com.leaquan.petinder.ui.check_in.login.LoginFragment.Companion.FROM
 import com.leaquan.petinder.ui.check_in.verification.VerificationFragment
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
 import com.leaquan.petinder.util.pushFragment
+import com.leaquan.petinder.util.showShortToast
 import com.leaquan.petinder.util.type.Toast
 import com.leaquan.petinder.util.viewmodel.kodeinViewModel
 import java.util.concurrent.TimeUnit
@@ -47,11 +48,11 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
 
         with(binding) {
             btnSend.onClick {
-                login()
+                a()
             }
 
             layoutCountry.onClick {
-                showShortToast("cc", Toast.Type.WARNING)
+                activity?.showShortToast("cc", Toast.Type.WARNING)
                 val dialog = CountryListDialog()
                 dialog.show(childFragmentManager, CountryListDialog.TAG)
             }
@@ -98,13 +99,13 @@ class ForgotPasswordFragment : BaseFragmentMVVM<FragmentForgotPasswordBinding, F
         }
     }
 
-    private fun login() {
+    private fun a() {
         // get the phone number from edit text and append the country cde with it
         if (binding.edtPhoneNumber.text.toString().isNotEmpty()){
             val number = "+84${binding.edtPhoneNumber.text}".trim()
             sendVerificationCode(number)
         }else{
-           showShortToast(
+           activity?.showShortToast(
                "Enter mobile number",
                Toast.Type.ERROR
            )

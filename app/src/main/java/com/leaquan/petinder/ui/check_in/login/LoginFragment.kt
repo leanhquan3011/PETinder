@@ -19,11 +19,9 @@ import com.leaquan.petinder.databinding.FragmentLoginBinding
 import com.leaquan.petinder.ui.check_in.forgot_password.ForgotPasswordFragment
 import com.leaquan.petinder.ui.check_in.register.RegisterFragment
 import com.leaquan.petinder.ui.home.HomeActivity
-import com.leaquan.petinder.util.Social
-import com.leaquan.petinder.util.extension.WTF
-import com.leaquan.petinder.util.extension.onClick
-import com.leaquan.petinder.util.pushFragment
+import com.leaquan.petinder.util.*
 import com.leaquan.petinder.util.text.gradientText
+import com.leaquan.petinder.util.type.Toast
 import com.leaquan.petinder.util.view_extension.transformation
 import com.leaquan.petinder.util.viewmodel.kodeinViewModel
 
@@ -60,7 +58,7 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
 
     override fun onStart() {
         super.onStart()
-        var currentUser = auth.getCurrentUser()
+        var currentUser = auth.currentUser
         //updateUI(currentUser);
     }
 
@@ -93,7 +91,6 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
             layoutSocial.btnFacebook.onClick {
                 layoutSocial.loginFacebook.performClick()
                 loginWithFaceBook()
-                WTF("click roi mi")
             }
 
             layoutSocial.btnGoogle.onClick {
@@ -145,7 +142,6 @@ class LoginFragment : BaseFragmentMVVM<FragmentLoginBinding, LoginViewModel>() {
     }
 
     private fun handleFacebookAccessToken(accessToken: AccessToken) {
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

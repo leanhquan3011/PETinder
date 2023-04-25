@@ -9,7 +9,9 @@ import com.leaquan.petinder.base.fragment.BaseFragmentMVVM
 import com.leaquan.petinder.databinding.FragmentRegisterBinding
 import com.leaquan.petinder.ui.check_in.login.LoginFragment.Companion.FROM
 import com.leaquan.petinder.util.type.Toast.Type
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
+import com.leaquan.petinder.util.showLongToast
+import com.leaquan.petinder.util.showShortToast
 import com.leaquan.petinder.util.text.setLoginText
 import com.leaquan.petinder.util.view_extension.transformation
 import com.leaquan.petinder.util.viewmodel.kodeinViewModel
@@ -55,15 +57,15 @@ class RegisterFragment : BaseFragmentMVVM<FragmentRegisterBinding, RegisterViewM
             })
 
             layoutSocial.btnFacebook.onClick {
-                showShortToast("dung roif do mi", Type.WARNING)
+                activity?.showShortToast("dung roif do mi", Type.WARNING)
             }
 
             layoutSocial.btnGoogle.onClick {
-                showLongToast("cay ni thi hen xui", Type.ERROR)
+                activity?.showLongToast("cay ni thi hen xui", Type.ERROR)
             }
 
             layoutSocial.btnPhone.onClick {
-                showSnackBar("vai cc")
+
             }
         }
     }

@@ -54,26 +54,6 @@ abstract class BaseActivity <DB : ViewDataBinding> : AppCompatActivity(), BaseVi
         setUpObserver()
     }
 
-    fun showSnackBar(message: String) {
-        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
-    }
-
-    fun showShortToast(message: String, type: Type) {
-        ToastPET(this).makeText(
-            this,
-            message,
-            type of SHORT
-        )?.show()
-    }
-
-    fun showLongToast(message: String, type: Type) {
-        ToastPET(this).makeText(
-            this,
-            message,
-            type of LONG
-        )?.show()
-    }
-
     //status bar -> white
     open fun enableLightStatusBar(){
         val window = window

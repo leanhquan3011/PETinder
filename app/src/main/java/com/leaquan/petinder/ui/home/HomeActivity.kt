@@ -1,13 +1,10 @@
 package com.leaquan.petinder.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
-import com.leaquan.petinder.PETinderApplication
 import com.leaquan.petinder.R
 import com.leaquan.petinder.base.activity.BaseActivity
 import com.leaquan.petinder.databinding.ActivityHomeBinding
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.leaquan.petinder.R
 import com.leaquan.petinder.databinding.ItemAlphabetBinding
 import com.leaquan.petinder.ui.check_in.country_dialog.model.Alphabet
-import com.leaquan.petinder.util.extension.onClick
+import com.leaquan.petinder.util.onClick
 
 class AlphabetAdapter(
     private val alphabets : List<Alphabet> = listOf(),
